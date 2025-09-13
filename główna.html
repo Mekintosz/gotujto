@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Culinary Hub - Your Recipe Library</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #ec7813;
+        --secondary-color: #f3ede7;
+        --text-primary: #1b140d;
+        --text-secondary: #9a704c;
+        --background-color: #fcfaf8;
+      }
+      body {
+        font-family: 'Epilogue', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 px-6 py-4 backdrop-blur-sm">
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-3 text-2xl font-bold text-[var(--primary-color)]" href="#">
+<span class="material-symbols-outlined text-3xl"> local_dining </span>
+            Culinary Hub
+          </a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-[var(--primary-color)]" href="#">Recipes</a>
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">Community</a>
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors md:hidden">
+<span class="material-symbols-outlined"> menu </span>
+</button>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">
+<span class="material-symbols-outlined"> notifications </span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsCqNoYeLumt_mjgAm5ITsERNU8LFVvZgOKjiMDqNpaSmNwq8854nU_1NpeO2CXLG3wL7QQaON6PXBKGlDAJrrvzJCj4Ugj2objz8eICVCzCSEvTaDtUr-weSvtXXmtp7q1FuuG_tfO7qwgiZuKsOtzMlXnQlYUum-MJhg7VN8Fy80mVd6DMY01Q_tJjwXoZuL5uz0kzpzFBlvgqJBPAIYrIUeZp9szUhdy3rxmInpov6LhD-O_UKnAxYLCGDnbP7PVyTezn4nyA");'></div>
+</div>
+</header>
+<div class="flex flex-1">
+<aside class="hidden w-64 shrink-0 border-r border-[var(--secondary-color)] p-6 md:block">
+<h3 class="text-base font-bold uppercase tracking-wider text-[var(--text-secondary)]">Categories</h3>
+<nav class="mt-6 flex flex-col gap-1">
+<a class="flex items-center justify-between rounded-lg bg-[var(--primary-color)]/10 px-4 py-2 text-sm font-semibold text-[var(--primary-color)]" href="#">
+<span>All Recipes</span>
+<span class="material-symbols-outlined text-xl"> chevron_right </span>
+</a>
+<a class="flex items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-primary)] hover:bg-[var(--secondary-color)] transition-colors" href="#">
+<span>Breakfast</span>
+<span class="material-symbols-outlined text-xl text-[var(--text-secondary)]"> chevron_right </span>
+</a>
+<a class="flex items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-primary)] hover:bg-[var(--secondary-color)] transition-colors" href="#">
+<span>Lunch</span>
+<span class="material-symbols-outlined text-xl text-[var(--text-secondary)]"> chevron_right </span>
+</a>
+<a class="flex items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-primary)] hover:bg-[var(--secondary-color)] transition-colors" href="#">
+<span>Dinner</span>
+<span class="material-symbols-outlined text-xl text-[var(--text-secondary)]"> chevron_right </span>
+</a>
+<a class="flex items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-primary)] hover:bg-[var(--secondary-color)] transition-colors" href="#">
+<span>Desserts</span>
+<span class="material-symbols-outlined text-xl text-[var(--text-secondary)]"> chevron_right </span>
+</a>
+<a class="flex items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-primary)] hover:bg-[var(--secondary-color)] transition-colors" href="#">
+<span>Snacks</span>
+<span class="material-symbols-outlined text-xl text-[var(--text-secondary)]"> chevron_right </span>
+</a>
+<a class="flex items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-primary)] hover:bg-[var(--secondary-color)] transition-colors" href="#">
+<span>Drinks</span>
+<span class="material-symbols-outlined text-xl text-[var(--text-secondary)]"> chevron_right </span>
+</a>
+</nav>
+</aside>
+<main class="flex-1 p-6 lg:p-8">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8">
+<h1 class="text-4xl font-bold tracking-tight">Recipe Library</h1>
+<p class="mt-2 text-lg text-[var(--text-secondary)]">Explore a world of flavors with our curated collection of recipes.</p>
+</div>
+<div class="relative mb-8">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]"> search </span>
+<input class="w-full rounded-full border border-transparent bg-[var(--secondary-color)] py-3 pl-12 pr-4 text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]" placeholder="Search for recipes, ingredients, or chefs" type="text"/>
+</div>
+<div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-lg">
+<div class="aspect-h-3 aspect-w-4 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVrBkpjEQSnsDZ6cuQ5pBJjoLWESeW2VrK-igKBdWuAypqv5L9GcaPgvxEivqjA3F6lNJzmcqa2NVEsGUKwblDcPttqn3s6O0OdPRhyjxH8Uds7kCq18AeTjCFv0wjTokuTN2IOM6alRUdvOAj2tMzMCgIuDwvyivdl5wCuZnyn35WP_oZDWvJbven873pGO83vY2SFtSQMZ8eue0DyIq4LS9pcp2-2szPL7xRGV_9aWkIHnWWe6XqKRqu6YXJCxvJ_SugeImQdA");'></div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold">Savory Chicken Stir-Fry</h3>
+<p class="mt-1 text-sm text-[var(--text-secondary)]">A quick and flavorful weeknight dinner option.</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-lg">
+<div class="aspect-h-3 aspect-w-4 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcHTctwzbJMzN9M9OzRo42gMg3G7oEztbYIoAeH2sBET_ZTv5aC-TxFwk72EI40AZl4NzYbLuZktLh3PTUo8kKWXh9dVB08MyEkhNvuDla0gaNeERvnNwSS4fFcvDM-cPRo5Va5gnJfwK7UDDZWbHCttFaGPdGbhaWso9ihGqhDtSF0vUJ0rd97wVe3ibBeCBOvwtNa1kY7dzVoS5cfZEJLyXxp6ZF1ehStSkbqNX6zan_N5BtJE34f6scVaY2P_h49ghrORD1_A");'></div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold">Creamy Tomato Pasta</h3>
+<p class="mt-1 text-sm text-[var(--text-secondary)]">Classic comfort food that's ready in under 30 minutes.</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-lg">
+<div class="aspect-h-3 aspect-w-4 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHTZrGHUIRyHwURBkxDDEhfouoEML3P5JZ6qtpNB6hxbtTLUHWWsxsEcCixQS0q5nLhZ4QjSNg1Fu2Df2WzpsT30vttOXw-VC36Umf8-Md8mImhexUuOdhII9uNPywiPK5_Nmw6zyPFcKhApERvmg10w5trviMN8w9ZtEMQ6LXLfuZJ34hBXBstwOOlxLVB9tKly4xX6mA-mZdEp00vEJZhDAz9VxeFr0CxKSiqckBgP6E-NNgBJZOXGwyy7WxY-NrKdfBn7Zgnw");'></div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold">Refreshing Summer Salad</h3>
+<p class="mt-1 text-sm text-[var(--text-secondary)]">Light, crisp, and perfect for a warm day.</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-lg">
+<div class="aspect-h-3 aspect-w-4 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCLBtoFbVgNOMM2WTJEL72x7bOV78uJrx9keK3Plee7zekSmDicd3yZ4nxF8Z7Qs_n34r2WgBk-P44S-blFH4jtEw8CG58BmCGIqO05rPfy-GhXnoe40X5bBbQbuOUTZQ7BeWjYgg92a0NT-Fa8yhCRn1w8dBZgeDSmMKvTJumFL3uwK8MxJDsn4Iha99H11VLLwoUQ04z0evO4T8kLMFGZwJij9YnrGayzv6-FhH2ZuVEn6_SZlwg6AgSpZJgjYEpFCQWFeaEZw");'></div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold">Decadent Chocolate Cake</h3>
+<p class="mt-1 text-sm text-[var(--text-secondary)]">A rich and moist treat for any celebration.</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-lg">
+<div class="aspect-h-3 aspect-w-4 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBpzhERFPi4RqP8w5VxqjmV3cVxamPwOoxrn7nlGwtDOw0kinS5YozCy6oDNmAYpZzW4_DXzqMDIljX8BxzGDLAWdmQzpX18bar2P7KvuTqXFvVxFJ1gGjpHgybgcLeTuI8yGD_2IEZ6YZVQqIJ8c41BWODUZR_nw91rh71qiIeUk9RfblDwGX7STedpbmByKBZ7j_uha-eqtJYuhCBsG8ZzHpgUDPA7Jsva-rIkzzBm8HomeS8ELP51q3RsMPGWaM-Yg38A2EE8g");'></div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold">Spicy Shrimp Tacos</h3>
+<p class="mt-1 text-sm text-[var(--text-secondary)]">Flavorful tacos with a zesty lime crema.</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-lg">
+<div class="aspect-h-3 aspect-w-4 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDesDqlO12a9DjwznOGZQ3Oz-1CS-uzxen3IuyBLGOwSUJ0xXcHrW1VATbkei-1kHV_0lg6pazLLh6R8MdouH018R8NdCSaYRteEx2kCoYBlDA9qSk2PO7alk0uAcWFFDpy9gHbx2skOJcpsmaTBmQV0BiiSGqn87yF5_K-yReUIzKccvZswCCNG-CNK2qWE1xw6MpiCZiAfj6sH2Es68YwFZD9tAl0v7fme4SBEbIes1ABlA3ma47GPbaBQf3M24KOVVm9EK-KVw");'></div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold">Hearty Vegetable Soup</h3>
+<p class="mt-1 text-sm text-[var(--text-secondary)]">A comforting and nourishing bowl of goodness.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
