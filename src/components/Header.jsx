@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header className="sticky top-0 z-10 flex items-center justify-between border-b border-secondary bg-background/80 px-6 py-4 backdrop-blur-sm">
-      <div class="flex items-center gap-6">
+      <div className="flex items-center gap-6">
         <a
           className="flex items-center gap-3 text-3xl font-logo text-text-logo"
           href="#"

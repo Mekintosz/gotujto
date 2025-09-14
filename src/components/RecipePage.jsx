@@ -1,4 +1,5 @@
-export function RecipeDetail({ recipe, onBack }) {
+export default function RecipeDetail({ recipe, onBack }) {
+  if (!recipe) return <p>Nie znaleziono przepisu.</p>;
   return (
     <main className="flex-1">
       {/* Hero */}
@@ -6,7 +7,7 @@ export function RecipeDetail({ recipe, onBack }) {
         <div className="absolute inset-0 bg-black/40"></div>
         <img
           alt={recipe.title}
-          src={recipe.imageUrl}
+          src={recipe.image}
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-white">
@@ -63,13 +64,13 @@ export function RecipeDetail({ recipe, onBack }) {
               <div className="mt-4 grid grid-cols-2 gap-4">
                 <div className="rounded-lg bg-[var(--secondary-color)] p-4">
                   <div className="text-sm font-medium text-[var(--text-secondary)]">
-                    Prep Time
+                    ⏱ Prep Time
                   </div>
                   <div className="text-lg font-bold">{recipe.prepTime}</div>
                 </div>
                 <div className="rounded-lg bg-[var(--secondary-color)] p-4">
                   <div className="text-sm font-medium text-[var(--text-secondary)]">
-                    Cook Time
+                    🔥 Cook Time
                   </div>
                   <div className="text-lg font-bold">{recipe.cookTime}</div>
                 </div>
