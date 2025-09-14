@@ -73,7 +73,6 @@ function Sidebar() {
           </a>
         </nav>
       </aside>
-      ;
     </div>
   );
 }
