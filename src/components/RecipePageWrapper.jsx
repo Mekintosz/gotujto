@@ -4,7 +4,7 @@ import RecipePage from "./RecipePage";
 
 function RecipePageWrapper() {
   const { id } = useParams();
-  const recipe = recipes[id];
+  const recipe = recipes.find((r) => r.id === id);
   return <RecipePage recipe={recipe} />;
 }
 

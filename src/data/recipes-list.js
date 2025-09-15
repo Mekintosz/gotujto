@@ -1,6 +1,6 @@
 export const recipes = [
   {
-    id: 1,
+    id: "chicken-stir-fry",
     title: "Savory Chicken Stir-Fry",
     description: "Quick and flavorful weeknight dinner.",
     image: "https://images.unsplash.com/photo-1604908177225-6d2f2f7a4e97",
@@ -23,7 +23,7 @@ export const recipes = [
     ],
   },
   {
-    id: 2,
+    id: "vegan-buddha-bowl",
     title: "Vegan Buddha Bowl",
     description: "Healthy and colorful plant-based bowl.",
     image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
@@ -46,7 +46,7 @@ export const recipes = [
     ],
   },
   {
-    id: 3,
+    id: "chocolate-lava-cake",
     title: "Chocolate Lava Cake",
     description: "Decadent dessert with molten center.",
     image: "https://images.unsplash.com/photo-1601979034097-dc9b9bb31b6e",
@@ -68,7 +68,7 @@ export const recipes = [
     ],
   },
   {
-    id: 4,
+    id: "avocado-toast-egg",
     title: "Avocado Toast with Egg",
     description: "Classic breakfast with creamy avocado and runny egg.",
     image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
@@ -89,7 +89,7 @@ export const recipes = [
     ],
   },
   {
-    id: 5,
+    id: "greek-salad",
     title: "Greek Salad",
     description: "Fresh salad with feta, olives, and tomatoes.",
     image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
@@ -111,7 +111,7 @@ export const recipes = [
     ],
   },
   {
-    id: 6,
+    id: "spaghetti-carbonara",
     title: "Spaghetti Carbonara",
     description: "Classic Italian pasta dish.",
     image: "https://images.unsplash.com/photo-1603133872878-684f02e65b65",
@@ -133,7 +133,7 @@ export const recipes = [
     ],
   },
   {
-    id: 7,
+    id: "pancakes-berries",
     title: "Pancakes with Berries",
     description: "Fluffy pancakes topped with fresh berries.",
     image: "https://images.unsplash.com/photo-1587735202750-888bcff7f7a9",
@@ -155,7 +155,7 @@ export const recipes = [
     ],
   },
   {
-    id: 8,
+    id: "caprese-salad",
     title: "Caprese Salad",
     description: "Simple Italian salad with mozzarella and tomato.",
     image: "https://images.unsplash.com/photo-1572441710534-680d3a2f3d40",
@@ -176,7 +176,7 @@ export const recipes = [
     ],
   },
   {
-    id: 9,
+    id: "margarita-pizza",
     title: "Margarita Pizza",
     description: "Neapolitan-style pizza with fresh ingredients.",
     image: "https://images.unsplash.com/photo-1548365328-8b849f1cb9e6",
@@ -191,7 +191,7 @@ export const recipes = [
     ],
   },
   {
-    id: 10,
+    id: "berry-smoothie",
     title: "Berry Smoothie",
     description: "Refreshing smoothie with mixed berries.",
     image: "https://images.unsplash.com/photo-1572441710534-680d3a2f3d40",
@@ -211,7 +211,7 @@ export const recipes = [
     ],
   },
   {
-    id: 11,
+    id: "grilled-salmon",
     title: "Grilled Salmon",
     description: "Healthy salmon fillet with lemon.",
     image: "https://images.unsplash.com/photo-1617196035935-dc48d4ad3e19",
@@ -226,7 +226,7 @@ export const recipes = [
     ],
   },
   {
-    id: 12,
+    id: "beef-tacos",
     title: "Beef Tacos",
     description: "Mexican-style beef tacos with salsa.",
     image: "https://images.unsplash.com/photo-1601924638867-3ecb9fcd5c6c",
@@ -247,7 +247,7 @@ export const recipes = [
     ],
   },
   {
-    id: 13,
+    id: "caesar-salad",
     title: "Caesar Salad",
     description: "Crisp romaine with creamy dressing.",
     image: "https://images.unsplash.com/photo-1572441710534-680d3a2f3d40",
@@ -267,7 +267,7 @@ export const recipes = [
     ],
   },
   {
-    id: 14,
+    id: "tom-yum-soup",
     title: "Tom Yum Soup",
     description: "Spicy and sour Thai soup.",
     image: "https://images.unsplash.com/photo-1633422904235-b8bdf65c1b87",
@@ -290,7 +290,7 @@ export const recipes = [
     ],
   },
   {
-    id: 15,
+    id: "french-toast",
     title: "French Toast",
     description: "Sweet breakfast with syrup.",
     image: "https://images.unsplash.com/photo-1543779503-64d0c9a2f623",
@@ -312,7 +312,7 @@ export const recipes = [
     ],
   },
   {
-    id: 16,
+    id: "sushi-rolls",
     title: "Sushi Rolls",
     description: "Homemade sushi with salmon and avocado.",
     image: "https://images.unsplash.com/photo-1553621042-f6e147245754",
@@ -328,7 +328,7 @@ export const recipes = [
     ],
   },
   {
-    id: 17,
+    id: "falafel-wrap",
     title: "Falafel Wrap",
     description: "Middle Eastern chickpea wrap.",
     image: "https://images.unsplash.com/photo-1604908553915-30ffb08ddc85",
