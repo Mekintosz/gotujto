@@ -10,12 +10,15 @@ function Sidebar() {
         Categories
       </h3>
       <ul className="mt-6 flex flex-col gap-1">
-        <li className="flex items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-primary)] hover:bg-[var(--secondary-color)] transition-colors">
-          Wszystkie przepisy{" "}
+        <Link
+          to="/"
+          className="flex items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-primary)] hover:bg-[var(--secondary-color)] transition-colors"
+        >
+          Wszystkie przepisy
           <span className="material-symbols-outlined text-xl">
             chevron_right
           </span>
-        </li>
+        </Link>
         {categories.map((cat) => (
           <li key={cat}>
             <Link

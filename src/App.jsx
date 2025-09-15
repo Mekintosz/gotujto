@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import MainContent from "./components/MainContent";
 import RecipePageWrapper from "./components/RecipePageWrapper";
+import CategoryPage from "./components/CategoryPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/recipes/:id" element={<RecipePageWrapper />} />
+          <Route path="/category/:category" element={<CategoryPage />} />
         </Routes>
       </div>
     </Router>
