@@ -1,8 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function RecipeCard({ id, title, description, image }) {
+  const location = useLocation();
+  const fromCategory = location.pathname.startsWith("/category/")
+    ? location.pathname.split("/").pop()
+    : null;
+
   return (
-    <Link to={`/recipes/${id}`} className="block group">
+    <Link
+      to={`/recipes/${id}`}
+      state={fromCategory ? { fromCategory } : null}
+      className="block group"
+    >
       <div className="group flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-lg">
         <div className="aspect-w-4 aspect-h-3 overflow-hidden">
           <img

@@ -1,5 +1,19 @@
+import { Link, useLocation } from "react-router-dom";
+
 export default function RecipeDetail({ recipe, onBack }) {
-  if (!recipe) return <p>Nie znaleziono przepisu.</p>;
+  const location = useLocation();
+
+  if (!recipe)
+    return (
+      <p className="text-center text-textSecondary">Nie znaleziono przepisu.</p>
+    );
+  let backLink = "/";
+  let backLabel = "Wróć do przepisów";
+
+  if (location.state?.fromCategory) {
+    backLink = `/category/${location.state.fromCategory}`;
+    backLabel = `Wróć do ${location.state.fromCategory} Przepisy`;
+  }
   return (
     <main className="flex-1">
       {/* Hero */}
@@ -19,17 +33,16 @@ export default function RecipeDetail({ recipe, onBack }) {
           </p>
         </div>
       </div>
-
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Back & Actions */}
         <div className="flex items-center justify-between mb-8">
-          <button
-            onClick={onBack}
+          <Link
+            to={backLink}
             className="flex items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
           >
             <span className="material-symbols-outlined">arrow_back</span>
-            Back to Recipes
-          </button>
+            {backLabel}
+          </Link>
           <div className="flex items-center gap-4">
             <button className="flex items-center gap-2 rounded-full border border-[var(--secondary-color)] px-4 py-2 text-sm font-medium hover:bg-[var(--secondary-color)] transition-colors">
               <span className="material-symbols-outlined text-xl">
