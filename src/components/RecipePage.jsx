@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 
-export default function RecipeDetail({ recipe, onBack }) {
+export default function RecipeDetail({ recipe }) {
   const location = useLocation();
 
   if (!recipe)

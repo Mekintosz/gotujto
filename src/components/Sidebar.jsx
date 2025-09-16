@@ -32,15 +32,6 @@ function Sidebar() {
             </Link>
           </li>
         ))}
-        <a
-          className="flex items-center justify-between rounded-lg bg-[var(--primary-color)]/10 px-4 py-2 text-sm font-semibold text-[var(--primary-color)]"
-          href="#"
-        >
-          <span>All Recipes</span>
-          <span className="material-symbols-outlined text-xl">
-            chevron_right
-          </span>
-        </a>
       </ul>
     </aside>
   );

@@ -4,7 +4,7 @@ import SearchBox from "./SearchBox";
 import { useState, useMemo } from "react";
 
 export default function MainContent() {
-  const { query, setQuery } = useState("");
+  const [query, setQuery] = useState("");
 
   const normalizedQuery = (query || "").trim().toLowerCase();
 
@@ -29,17 +29,11 @@ export default function MainContent() {
 
   return (
     <main className="flex-1 p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <SearchBox query={query} setQuery={setQuery} />
+      <SearchBox query={query} onChange={setQuery} />
 
       {filteredRecipes.length > 0 ? (
         filteredRecipes.map((recipe) => (
-          <RecipeCard
-            key={recipe.id}
-            id={recipe.id}
-            {...recipe}
-            query={query}
-            setQuery={setQuery}
-          />
+          <RecipeCard key={recipe.id} id={recipe.id} {...recipe} />
         ))
       ) : (
         <p className="text-textSecondary">Nie znaleziono przepisów.</p>
