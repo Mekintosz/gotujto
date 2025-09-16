@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { recipes } from "../data/recipes-list";
 import RecipeCard from "./RecipeCard";
+import { useState } from "react";
 
 function CategoryPage() {
   const { category } = useParams();
