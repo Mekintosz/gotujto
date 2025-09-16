@@ -17,8 +17,6 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 | --------------------------------------------- | ------------------------------------------- |
 | ![Library View](docs/screenshots/library.png) | ![Detail View](docs/screenshots/detail.png) |
 
-_(Screenshots are placeholders – update with your app’s actual UI once available.)_
-
 ---
 
 ## 🚀 Features (current & planned)
@@ -74,7 +72,6 @@ _(Screenshots are placeholders – update with your app’s actual UI once avail
 2. Install dependencies:
 
    ```bash
-   Copy code
    npm install
 
    ```
@@ -82,14 +79,16 @@ _(Screenshots are placeholders – update with your app’s actual UI once avail
 3. Start dev server:
 
    ```bash
-   Copy code
    npm run dev
 
    ```
 
 4. Open in browser:
-   Copy code
+   ```bash
    http://localhost:5173
+   ```
+
+---
 
 ## 📐 App Logic
 
@@ -106,9 +105,11 @@ _(Screenshots are placeholders – update with your app’s actual UI once avail
 - Expansion
   Replace static JSON with API calls. Add forms for user-generated content.
 
+---
+
 ## 🌱 Skills Gained as a Developer
 
-- **Current development**:
+**Current development**:
 
 - Building responsive layouts with TailwindCSS
 
@@ -120,7 +121,7 @@ _(Screenshots are placeholders – update with your app’s actual UI once avail
 
 - Managing local state and JSON data
 
-- **Future skills with expansion**:
+**Future skills with expansion**:
 
 - API integration (fetch, axios, custom backend)
 
@@ -133,6 +134,8 @@ _(Screenshots are placeholders – update with your app’s actual UI once avail
 - Deployment & CI/CD pipelines
 
 - Accessibility improvements (ARIA, keyboard nav, color contrast checks)
+
+---
 
 ## 🔮 Expansion Ideas
 
@@ -148,11 +151,13 @@ _(Screenshots are placeholders – update with your app’s actual UI once avail
 
 - Multilingual support (e.g. Polish & English)
 
+---
+
 ## ⚖️ Future Tech Choices
 
 ### Moving to TypeScript
 
-- **Pros**:
+**Pros**:
 
 - Type safety → fewer runtime bugs
 
@@ -160,15 +165,17 @@ _(Screenshots are placeholders – update with your app’s actual UI once avail
 
 - Easier scaling with more contributors
 
-- **Cons**:
+**Cons**:
 
 - More boilerplate for types/interfaces
 
 - Slower prototyping at early stage
 
-###Migrating to Next.js###
+---
 
-- **Pros**:
+### Migrating to Next.js###
+
+**Pros**:
 
 - Server-side rendering (SEO-friendly)
 
@@ -178,11 +185,13 @@ _(Screenshots are placeholders – update with your app’s actual UI once avail
 
 - Easy deployment on Vercel
 
-- **Cons**:
+**Cons**:
 
 - Added complexity if project stays small
 
 - Lock-in to Next.js conventions
+
+---
 
 ## ⚠️ Challenges
 
@@ -195,6 +204,8 @@ _(Screenshots are placeholders – update with your app’s actual UI once avail
 - Handling images efficiently (CDN, optimization)
 
 - Long-term: deciding when to move from static JSON → database
+
+---
 
 ## 📜 License
 
