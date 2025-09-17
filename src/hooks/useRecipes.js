@@ -6,20 +6,40 @@ export default function useRecipes() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/src/data/recipes.json")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to load recipes");
-        return res.json();
-      })
-      .then((data) => {
-        setRecipes(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error loading recipes:", err);
-        setError(err);
-        setLoading(false);
-      });
+    let isMounted = true; // prevent state updates if component unmounts
+
+    async function fetchRecipes() {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const response = await fetch("/src/data/recipes.json");
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (isMounted) {
+          setRecipes(data);
+        }
+      } catch (error) {
+        if (isMounted) {
+          setError(error.message);
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    }
+
+    fetchRecipes();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return { recipes, loading, error };
