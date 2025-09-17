@@ -1,50 +1,48 @@
-# 🍲 Gotujto – Your Modern Recipe Library
+# Gotujto - Modern Recipe Library
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)  
-![Vite](https://img.shields.io/badge/Built%20with-Vite-646CFF.svg?logo=vite&logoColor=white)  
-![React](https://img.shields.io/badge/Frontend-React-61DAFB.svg?logo=react&logoColor=black)  
-![TailwindCSS](https://img.shields.io/badge/Styled%20with-TailwindCSS-06B6D4.svg?logo=tailwindcss&logoColor=white)  
-![Status](https://img.shields.io/badge/Status-Alpha-orange)
+Gotujto is a modern, minimalist recipe library web application designed to help users **browse, search, and organise recipes** in a clean and intuitive interface. 
+The project began as a static prototype (HTML + Tailwind CSS) and is evolving into a full React-based web application with routing, dynamic data, and user interactivity.
 
-Gotujto is a modern, minimalist recipe library web application designed to help users **browse, search, and organize recipes** in a clean and intuitive interface.  
-The project started as a static prototype (HTML + TailwindCSS) and is evolving into a full React-based web app with routing, dynamic data, and user interactivity.
+![Status](https://img.shields.io/badge/status-alpha-lightgrey?style=flat-square) <br/>
+![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)<br/>
+![React](https://img.shields.io/badge/react-19-lightgrey?style=flat-square&logo=react) <br/>
+![Vite](https://img.shields.io/badge/vite-7-lightgrey?style=flat-square&logo=vite)<br/>
+![Tailwind](https://img.shields.io/badge/tailwindcss-4-lightgrey?style=flat-square&logo=tailwindcss)<br/>
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 | Recipe Library                                | Recipe Detail                               |
 | --------------------------------------------- | ------------------------------------------- |
-| ![Library View](docs/screenshots/library.png) | ![Detail View](docs/screenshots/detail.png) |
+| ![Library View](src/assets/screenshot-page.png) | ![Detail View](src/assets/screenshot-detail.png) |
 
 ---
 
-## 🚀 Features (current & planned)
+## Features (current & planned)
 
-- 📚 Recipe Library - clean grid layout of curated recipes.
-- 🔍 Search bar - filter by recipe name, ingredients, or tags.
-- 🗂️ Categories - organize recipes (breakfast, lunch, dinner, snacks, etc.).
-- 📝 Recipe detail view - ingredients, instructions, nutrition info.
-- ⭐ Favorites - save recipes (via localStorage or backend later).
-- 📱 Responsive UI - mobile-first, Tailwind-based.
-- 🌙 Dark mode (planned).
-- 👩‍🍳 Community features (future: sharing, comments, ratings).
+- Recipe Library - clean grid layout of curated recipes.
+- Search bar - filter by recipe name, ingredients, or tags.
+- Categories - organise recipes (breakfast, lunch, dinner, snacks, etc.).
+- Recipe detail view - ingredients, instructions, nutrition info.
+- Favourites - save recipes (via localStorage or backend later).
+- Responsive UI - mobile-first, Tailwind-based.
+- Dark mode (planned).
+- Community features (future: sharing, comments, ratings).
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Current
 
 - **Frontend**:
-
   - [React](https://react.dev/) (via Vite for fast bundling)
   - [React Router](https://reactrouter.com/) (routing between library & recipe details)
   - [TailwindCSS](https://tailwindcss.com/) for utility-first styling
   - Google Fonts (Epilogue) & Material Icons
 
 - **Data**:
-
   - Static JSON for recipes (easy to expand later).
 
 - **Tooling**:
@@ -59,7 +57,7 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 
 ---
 
-## ⚙️ Setup & Development
+## Setup & Development
 
 1. Clone repo:
 
@@ -90,10 +88,10 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 
 ---
 
-## 📐 App Logic
+## App Logic
 
 - Homepage (Recipe Library)
-  Fetch recipes from JSON, render with RecipeCard.
+  Fetch recipes from a JSON file and render them with RecipeCard.
   Filters: search query + category.
 
 - Recipe Detail View
@@ -107,7 +105,7 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 
 ---
 
-## 🌱 Skills Gained as a Developer
+## Skills Gained as a Developer
 
 **Current development**:
 
@@ -115,7 +113,7 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 
 - Setting up a React project with Vite
 
-- omponent-driven architecture (cards, lists, details)
+- component-driven architecture (cards, lists, details)
 
 - Client-side routing with React Router
 
@@ -129,7 +127,7 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 
 - Authentication & authorization flows
 
-- Database design for recipes, users, favorites
+- Database design for recipes, users, favourites
 
 - Deployment & CI/CD pipelines
 
@@ -137,7 +135,7 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 
 ---
 
-## 🔮 Expansion Ideas
+## Expansion Ideas
 
 - PWA (Progressive Web App) for offline recipe access
 
@@ -153,7 +151,7 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 
 ---
 
-## ⚖️ Future Tech Choices
+## Future Tech Choices
 
 ### Moving to TypeScript
 
@@ -169,11 +167,11 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 
 - More boilerplate for types/interfaces
 
-- Slower prototyping at early stage
+- Slower prototyping at the early stage
 
 ---
 
-### Migrating to Next.js###
+### Migrating to Next.js
 
 **Pros**:
 
@@ -187,26 +185,26 @@ The project started as a static prototype (HTML + TailwindCSS) and is evolving i
 
 **Cons**:
 
-- Added complexity if project stays small
+- Added complexity if the project stays small
 
 - Lock-in to Next.js conventions
 
 ---
 
-## ⚠️ Challenges
+## Challenges
 
 - Keeping UI minimal while adding features (avoid bloat)
 
 - Managing recipe data schema (ingredients, steps, nutrition)
 
-- SEO optimization for recipe content
+- SEO optimisation for recipe content
 
-- Handling images efficiently (CDN, optimization)
+- Handling images efficiently (CDN, optimisation)
 
 - Long-term: deciding when to move from static JSON → database
 
 ---
 
-## 📜 License
+## License
 
 MIT – feel free to fork, use, and contribute.
