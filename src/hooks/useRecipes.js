@@ -6,7 +6,7 @@ export default function useRecipes() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("src/data/recipes.json")
+    fetch("/src/data/recipes.json")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load recipes");
         return res.json();

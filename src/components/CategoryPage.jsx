@@ -1,13 +1,16 @@
 import { useParams } from "react-router-dom";
-import { recipes } from "../data/recipes-list";
+import useRecipes from "../hooks/useRecipes";
 import RecipeCard from "./RecipeCard";
-import { useState } from "react";
 
 function CategoryPage() {
   const { category } = useParams();
+  const { recipes, loading, error } = useRecipes();
   const filtered = recipes.filter(
     (r) => r.category.toLowerCase() === category.toLowerCase()
   );
+
+  if (loading) return <p>Loading recipes...</p>;
+  if (error) return <p className="p-6 text-red-500">Error loading recipes.</p>;
 
   return (
     <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
