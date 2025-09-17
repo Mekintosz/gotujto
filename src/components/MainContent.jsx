@@ -1,10 +1,12 @@
 import RecipeCard from "./RecipeCard";
-import { recipes } from "../data/recipes-list";
+import useRecipes from "../hooks/useRecipes";
 import SearchBox from "./SearchBox";
 import { useState, useMemo } from "react";
 
 export default function MainContent() {
   const [query, setQuery] = useState("");
+
+  const { recipes, loading, error } = useRecipes();
 
   const normalizedQuery = (query || "").trim().toLowerCase();
 
@@ -14,18 +16,19 @@ export default function MainContent() {
     return recipes.filter((recipe) => {
       const titleMatches = (recipe.title ?? "")
         .toLowerCase()
-        .includes(query.toLowerCase());
+        .includes(normalizedQuery);
 
-      // OPTIONAL: search ingredients too (uncomment to enable)
-      // const ingredientsMatches = (r.ingredients || []).some(i =>
+      // Optional: also search ingredients
+      // const ingredientsMatches = (recipe.ingredients || []).some(i =>
       //   i.toLowerCase().includes(normalizedQuery)
       // );
 
-      // currently we match only title - OR combine with ingredientsMatches:
-      // return titleMatches || ingredientsMatches;
-      return titleMatches;
+      return titleMatches; // or titleMatches || ingredientsMatches
     });
-  }, [normalizedQuery]);
+  }, [normalizedQuery, recipes]);
+
+  if (loading) return <p>Loading recipes...</p>;
+  if (error) return <p className="p-6 text-red-500">Error loading recipes.</p>;
 
   return (
     <main className="flex-1 p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
