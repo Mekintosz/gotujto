@@ -1,13 +1,13 @@
 # Gotujto - Modern Recipe Library
 
-Gotujto is a modern, minimalist recipe library web application designed to help users **browse, search, and organise recipes** in a clean and intuitive interface.  
+Gotujto is a modern, minimalist recipe library web application designed to help users **browse, search, and organise recipes** in a clean and intuitive interface. 
 The project began as a static prototype (HTML + Tailwind CSS) and is evolving into a full React-based web application with routing, dynamic data, and user interactivity.
 
-![Status](https://img.shields.io/badge/status-alpha-lightgrey?style=flat-square)
-![React](https://img.shields.io/badge/react-19-black?style=flat-square&logo=react)
-![Vite](https://img.shields.io/badge/vite-6-black?style=flat-square&logo=vite)
-![Tailwind](https://img.shields.io/badge/tailwindcss-4-black?style=flat-square&logo=tailwindcss)
-![License](https://img.shields.io/badge/license-MIT-black?style=flat-square)
+![Status](https://img.shields.io/badge/status-alpha-lightgrey?style=flat-square) <br/>
+![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)<br/>
+![React](https://img.shields.io/badge/react-19-lightgrey?style=flat-square&logo=react) <br/>
+![Vite](https://img.shields.io/badge/vite-7-lightgrey?style=flat-square&logo=vite)<br/>
+![Tailwind](https://img.shields.io/badge/tailwindcss-4-lightgrey?style=flat-square&logo=tailwindcss)<br/>
 
 ---
 
@@ -15,7 +15,7 @@ The project began as a static prototype (HTML + Tailwind CSS) and is evolving in
 
 | Recipe Library                                | Recipe Detail                               |
 | --------------------------------------------- | ------------------------------------------- |
-| ![Library View](docs/screenshots/library.png) | ![Detail View](docs/screenshots/detail.png) |
+| ![Library View](src/assets/screenshot-page.png) | ![Detail View](src/assets/screenshot-detail.png) |
 
 ---
 
@@ -171,7 +171,7 @@ The project began as a static prototype (HTML + Tailwind CSS) and is evolving in
 
 ---
 
-### Migrating to Next.js###
+### Migrating to Next.js
 
 **Pros**:
 
