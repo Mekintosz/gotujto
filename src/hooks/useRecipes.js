@@ -13,7 +13,7 @@ export default function useRecipes() {
         setLoading(true);
         setError(null);
 
-        const response = await fetch("src/data/recipes.json");
+        const response = await fetch("/recipes.json");
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
