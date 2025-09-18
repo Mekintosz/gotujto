@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-import useRecipes from "../hooks/useRecipes";
+import useRecipesContext from "../contexts/useRecipesContext";
 import RecipeCard from "./RecipeCard";
 
 function CategoryPage() {
+  const { recipes, loading, error } = useRecipesContext();
   const { category } = useParams();
-  const { recipes, loading, error } = useRecipes();
+
   const filtered = recipes.filter(
     (r) => r.category.toLowerCase() === category.toLowerCase()
   );

@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header className="sticky top-0 z-10 flex items-center justify-between border-b border-secondary bg-background/80 px-6 py-4 backdrop-blur-sm">
-      <div className="flex items-center gap-6">
+      <div className="flex items-center justify-between gap-6">
         <a
           className="flex items-center gap-3 text-3xl font-logo text-text-logo"
           href="#"
@@ -13,25 +13,25 @@ export default function Header() {
         </a>
         <nav className="hidden md:flex gap-6 font-primary font-medium">
           <a
-            className="text-sm font-medium text-text-primary hover:text-text-logo transition-colors"
+            className="text-me text-text-primary hover:text-text-logo transition-colors"
             href="#"
           >
             Home
           </a>
           <a
-            className="text-sm font-medium text-text-primary hover:text-text-logo transition-colors"
+            className="text-me  text-text-primary hover:text-text-logo transition-colors"
             href="#"
           >
             Recipes
           </a>
           <a
-            className="text-sm font-medium text-text-primary hover:text-text-logo transition-colors"
+            className="text-me  text-text-primary hover:text-text-logo transition-colors"
             href="#"
           >
             Community
           </a>
           <a
-            className="text-sm font-medium text-text-primary hover:text-text-logo transition-colors"
+            className="text-me  text-text-primary hover:text-text-logo transition-colors"
             href="#"
           >
             About
