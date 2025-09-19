@@ -1,51 +1,54 @@
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 flex items-center justify-between border-b border-secondary bg-background/80 px-6 py-4 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 flex items-center justify-between border-b border-secondary bg-background/80 px-3 backdrop-blur-sm">
       <div className="flex items-center justify-between gap-6">
         <a
-          className="flex items-center gap-3 text-3xl font-logo text-text-logo"
+          className="flex items-center-safe gap-1 text-4xl font-logo text-text-logo"
           href="#"
         >
-          <span className="material-symbols-outlined text-2xl">
-            bakery_dining
-          </span>
+          <img
+            className="h-16"
+            src="/images/bakery_dining.svg
+            "
+            alt="Crosaint icon"
+          />
           Gotujto
         </a>
-        <nav className="hidden md:flex gap-6 font-primary font-medium">
-          <a
-            className="text-me text-text-primary hover:text-text-logo transition-colors"
-            href="#"
-          >
-            Home
-          </a>
-          <a
-            className="text-me  text-text-primary hover:text-text-logo transition-colors"
-            href="#"
-          >
-            Recipes
-          </a>
-          <a
-            className="text-me  text-text-primary hover:text-text-logo transition-colors"
-            href="#"
-          >
-            Community
-          </a>
-          <a
-            className="text-me  text-text-primary hover:text-text-logo transition-colors"
-            href="#"
-          >
-            About
-          </a>
-        </nav>
       </div>
+      <nav className="hidden md:flex gap-6 font-primary font-medium">
+        <a className="text-me text-text-primary hover:text-text-logo " href="#">
+          Home
+        </a>
+        <a
+          className="text-me  text-text-primary hover:text-text-logo transition-colors"
+          href="#"
+        >
+          Recipes
+        </a>
+        <a
+          className="text-me  text-text-primary hover:text-text-logo transition-colors"
+          href="#"
+        >
+          Community
+        </a>
+        <a
+          className="text-me  text-text-primary hover:text-text-logo transition-colors"
+          href="#"
+        >
+          About
+        </a>
+      </nav>
       <div className="flex items-center gap-4">
-        <button className="text-text-secondary hover:text-primary transition-colors md:hidden">
+        <button className=" hover:text-primary transition-colors md:hidden">
           <span className="material-symbols-outlined"> menu </span>
         </button>
-        <button className="text-text-secondary hover:text-primary transition-colors">
-          <span className="material-symbols-outlined"> notifications </span>
+        <button className="flex hover:text-primary transition-colors">
+          <span className="material-symbols-outlined items-center">
+            {" "}
+            notifications{" "}
+          </span>
         </button>
-        <div className="size-10 rounded-full bg-cover bg-center bg-blue-700"></div>
+        <img className="h-8 " src="/images/user-circle.svg" alt="avatar" />
       </div>
     </header>
   );

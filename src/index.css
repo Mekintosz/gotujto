@@ -10,18 +10,18 @@
   --color-background: #fff0e5;
   --color-text-primary: #1b140d;
   --color-text-secondary: #9a704c;
-  --color-text-logo: #ff9e27;
+  --color-text-logo: #ff7f0f;
 }
 
 root {
   --font-headings: "Poppins", sans-serif;
   --font-logo: "Chango", sans-serif;
-  --color-primary: #ec7813;
+  --color-primary: #;
   --color-secondary: #f3ede7;
   --color-background: #fff0e5;
   --colors-text-primary: #1b140d;
   --colors-text-secondary: #9a704c;
-  --color-text-logo: #ff9e27;
+  --color-text-logo: #ff7f0e;
 }
 
 body {
@@ -30,4 +30,28 @@ body {
 
 h1 {
   font-family: "Coiny";
+}
+
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v280/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2)
+    format("woff2");
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
 }

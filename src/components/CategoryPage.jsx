@@ -14,7 +14,7 @@ function CategoryPage() {
   if (error) return <p className="p-6 text-red-500">Error loading recipes.</p>;
 
   return (
-    <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <main className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {filtered.length > 0 ? (
         filtered.map((recipe) => <RecipeCard key={recipe.id} {...recipe} />)
       ) : (

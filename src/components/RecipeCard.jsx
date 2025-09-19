@@ -13,7 +13,7 @@ function RecipeCard({ id, title, description, image }) {
       className="block group"
     >
       <div className="group flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-lg">
-        <div className="aspect-w-4 aspect-h-3 overflow-hidden">
+        <div className="aspect-3/2 overflow-hidden">
           <img
             src={image}
             alt={title}

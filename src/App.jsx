@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className="flex flex-1">
+      <div className="flex flex-1 items-start">
         <Sidebar />
         <Routes>
           <Route path="/" element={<MainContent />} />
