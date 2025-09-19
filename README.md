@@ -1,6 +1,6 @@
 # Gotujto - Modern Recipe Library
 
-Gotujto is a modern, minimalist recipe library web application designed to help users **browse, search, and organise recipes** in a clean and intuitive interface. 
+Gotujto is a modern, minimalist recipe library web application designed to help users **browse, search, and organise recipes** in a clean and intuitive interface.
 The project began as a static prototype (HTML + Tailwind CSS) and is evolving into a full React-based web application with routing, dynamic data, and user interactivity.
 
 ![Status](https://img.shields.io/badge/status-alpha-lightgrey?style=flat-square) <br/>
@@ -13,20 +13,20 @@ The project began as a static prototype (HTML + Tailwind CSS) and is evolving in
 
 ## Screenshots
 
-| Recipe Library                                | Recipe Detail                               |
-| --------------------------------------------- | ------------------------------------------- |
+| Recipe Library                                  | Recipe Detail                                    |
+| ----------------------------------------------- | ------------------------------------------------ |
 | ![Library View](src/assets/screenshot-page.png) | ![Detail View](src/assets/screenshot-detail.png) |
 
 ---
 
 ## Features (current & planned)
 
-- Recipe Library - clean grid layout of curated recipes.
-- Search bar - filter by recipe name, ingredients, or tags.
+- Recipe Library - clean grid layout of curated recipes. ✔
+- Search bar - filter by recipe name ✔, ingredients, or tags.
 - Categories - organise recipes (breakfast, lunch, dinner, snacks, etc.).
 - Recipe detail view - ingredients, instructions, nutrition info.
 - Favourites - save recipes (via localStorage or backend later).
-- Responsive UI - mobile-first, Tailwind-based.
+- Responsive UI - mobile-first, Tailwind-based. ✔
 - Dark mode (planned).
 - Community features (future: sharing, comments, ratings).
 
@@ -37,16 +37,18 @@ The project began as a static prototype (HTML + Tailwind CSS) and is evolving in
 ### Current
 
 - **Frontend**:
+
   - [React](https://react.dev/) (via Vite for fast bundling)
   - [React Router](https://reactrouter.com/) (routing between library & recipe details)
   - [TailwindCSS](https://tailwindcss.com/) for utility-first styling
   - Google Fonts (Epilogue) & Material Icons
 
 - **Data**:
+
   - Static JSON for recipes (easy to expand later).
 
 - **Tooling**:
-  - Node.js + npm/yarn for dependency management
+  - Node.js + npm for dependency management
   - ESLint + Prettier (recommended for consistency)
 
 ### Possible Backend (future)
@@ -119,11 +121,13 @@ The project began as a static prototype (HTML + Tailwind CSS) and is evolving in
 
 - Managing local state and JSON data
 
+- State management with Context API
+
 **Future skills with expansion**:
 
 - API integration (fetch, axios, custom backend)
 
-- State management (Redux, Zustand, or Context API)
+- State management (Redux, Zustand)
 
 - Authentication & authorization flows
 
