@@ -12,7 +12,7 @@ function RecipeCard({ id, title, description, image }) {
       state={fromCategory ? { fromCategory } : null}
       className="block group"
     >
-      <div className="group flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-lg">
+      <div className="group  text-wrap flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-lg">
         <div className="aspect-3/2 overflow-hidden">
           <img
             src={image}
@@ -20,9 +20,13 @@ function RecipeCard({ id, title, description, image }) {
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
-        <div className="p-4 flex flex-col flex-1">
-          <h3 className="text-base font-bold text-textPrimary">{title}</h3>
-          <p className="mt-1 text-sm text-textSecondary">{description}</p>
+        <div className=" p-4 flex flex-col truncate">
+          <h3 className="text-base font-bold text-textPrimary truncate">
+            {title}
+          </h3>
+          <p className="mt-1 text-sm text-textSecondary truncate">
+            {description}
+          </p>
         </div>
       </div>
     </Link>

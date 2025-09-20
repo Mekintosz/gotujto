@@ -3,11 +3,11 @@ export default function Header() {
     <header className="sticky top-0 z-10 flex items-center justify-between border-b border-secondary bg-background/80 px-3 backdrop-blur-sm">
       <div className="flex items-center justify-between gap-6">
         <a
-          className="flex items-center-safe gap-1 text-4xl font-logo text-text-logo"
+          className="text-2xl lg:text-3xl flex items-center-safe gap-1 font-logo text-text-logo"
           href="#"
         >
           <img
-            className="h-16"
+            className="h-10 lg:h-14"
             src="/images/bakery_dining.svg
             "
             alt="Crosaint icon"
@@ -16,26 +16,26 @@ export default function Header() {
         </a>
       </div>
       <nav className="hidden md:flex gap-6 font-primary font-medium">
-        <a className="text-me text-text-primary hover:text-text-logo " href="#">
-          Home
+        <a className="text-me text-text-primary hover:text-text-logo" href="#">
+          Przepisy
         </a>
         <a
           className="text-me  text-text-primary hover:text-text-logo transition-colors"
           href="#"
         >
-          Recipes
+          Ulubione przepisy
         </a>
         <a
           className="text-me  text-text-primary hover:text-text-logo transition-colors"
           href="#"
         >
-          Community
+          Dyskusje
         </a>
         <a
           className="text-me  text-text-primary hover:text-text-logo transition-colors"
           href="#"
         >
-          About
+          O nas
         </a>
       </nav>
       <div className="flex items-center gap-4">

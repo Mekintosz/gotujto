@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import MainContent from "./components/MainContent";
-import RecipePageWrapper from "./components/RecipePageWrapper";
-import CategoryPage from "./components/CategoryPage";
+import MainContent from "./pages/MainContent";
+import RecipePageWrapper from "./pages/RecipePageWrapper";
+import CategoryPage from "./pages/CategoryPage";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useRecipesContext from "../contexts/useRecipesContext";
-import RecipeCard from "./RecipeCard";
+import RecipeCard from "../components/RecipeCard";
 
 function CategoryPage() {
   const { recipes, loading, error } = useRecipesContext();
