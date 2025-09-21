@@ -6,7 +6,6 @@ function RecipePageWrapper() {
   const { id } = useParams();
   const { recipes } = useRecipesContext();
   const recipe = recipes.find((r) => r.id === id);
-
   return <RecipePage recipe={recipe} />;
 }
 

@@ -1,7 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
+import useRecipesContext from "../contexts/useRecipesContext";
 
 export default function RecipeDetail({ recipe }) {
   const location = useLocation();
+  const { favorites, toggleFavourites } = useRecipesContext();
+  const isFavourite = favorites.includes(recipe.id);
 
   if (!recipe)
     return (
@@ -44,11 +47,14 @@ export default function RecipeDetail({ recipe }) {
             {backLabel}
           </Link>
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 rounded-full border border-[var(--secondary-color)] px-4 py-2 text-sm font-medium hover:bg-[var(--secondary-color)] transition-colors">
+            <button
+              onClick={() => toggleFavourites(recipe.id)}
+              className="flex items-center gap-2 rounded-full border border-[var(--secondary-color)] px-4 py-2 text-sm font-medium hover:bg-[var(--secondary-color)] transition-colors"
+            >
               <span className="material-symbols-outlined text-xl">
                 bookmark_border
               </span>
-              Save
+              {isFavourite ? "Saved" : "Save"}
             </button>
             <button className="flex items-center gap-2 rounded-full border border-[var(--secondary-color)] px-4 py-2 text-sm font-medium hover:bg-[var(--secondary-color)] transition-colors">
               <span className="material-symbols-outlined text-xl">print</span>

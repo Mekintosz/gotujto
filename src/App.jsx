@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import MainContent from "./pages/MainContent";
 import RecipePageWrapper from "./pages/RecipePageWrapper";
 import CategoryPage from "./pages/CategoryPage";
+import FavoritesPage from "./pages/FavoritesPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<MainContent />} />
           <Route path="/recipes/:id" element={<RecipePageWrapper />} />
           <Route path="/category/:category" element={<CategoryPage />} />
+          <Route path="/favourites" element={<FavoritesPage />} />
         </Routes>
       </div>
     </Router>

@@ -5,8 +5,8 @@ import { useState, useMemo } from "react";
 import useRecipesContext from "../contexts/useRecipesContext.js";
 
 export default function MainContent() {
-  const [query, setQuery] = useState("");
   const { recipes, loading, error } = useRecipesContext();
+  const [query, setQuery] = useState("");
   const normalizedQuery = (query || "").trim().toLowerCase();
 
   const filteredRecipes = useMemo(() => {

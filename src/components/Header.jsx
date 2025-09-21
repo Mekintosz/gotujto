@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <header className="sticky top-0 z-10 flex items-center justify-between border-b border-secondary bg-background/80 px-3 backdrop-blur-sm">
@@ -19,12 +21,12 @@ export default function Header() {
         <a className="text-me text-text-primary hover:text-text-logo" href="#">
           Przepisy
         </a>
-        <a
+        <Link
+          to={"/favourites"}
           className="text-me  text-text-primary hover:text-text-logo transition-colors"
-          href="#"
         >
           Ulubione przepisy
-        </a>
+        </Link>
         <a
           className="text-me  text-text-primary hover:text-text-logo transition-colors"
           href="#"
