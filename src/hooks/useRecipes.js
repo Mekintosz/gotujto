@@ -6,39 +6,34 @@ export default function useRecipes() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let isMounted = true; // prevent state updates if component unmounts
+    const abortController = new AbortController();
+    const { signal } = abortController;
 
     async function fetchRecipes() {
       try {
         setLoading(true);
         setError(null);
 
-        const response = await fetch("/recipes.json");
+        const response = await fetch("/recipes.json", { signal });
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-
-        if (isMounted) {
-          setRecipes(data);
-        }
+        setRecipes(data);
       } catch (error) {
-        if (isMounted) {
-          setError(error.message);
-        }
+        if (error.name === "AbortError") return;
+        setError(error.message);
       } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
+        setLoading(false);
       }
     }
 
     fetchRecipes();
 
     return () => {
-      isMounted = false;
+      abortController.abort();
     };
   }, []);
 

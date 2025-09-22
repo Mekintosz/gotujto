@@ -30,7 +30,7 @@ export default function MainContent() {
   return (
     <main className="flex-1">
       <Hero />
-      <SearchBox query={query} onChange={setQuery} />
+      <SearchBox value={query} onChange={setQuery} />
       <div className="flex-1 p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredRecipes.length > 0 ? (
           filteredRecipes.map((recipe) => (
