@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 flex items-center justify-between border-b border-secondary bg-background/80 px-3 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 flex items-center justify-between border-b border-secondary bg-background/80 px-6 backdrop-blur-sm">
       <div className="flex items-center justify-between gap-6">
         <a
           className="text-2xl lg:text-3xl flex items-center-safe gap-1 font-logo text-text-logo"
@@ -10,8 +10,7 @@ export default function Header() {
         >
           <img
             className="h-10 lg:h-14"
-            src="/images/bakery_dining.svg
-            "
+            src="/images/bakery_dining.svg"
             alt="Crosaint icon"
           />
           Gotujto
