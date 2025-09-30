@@ -17,9 +17,18 @@ export default function Header() {
         </a>
       </div>
       <nav className="hidden md:flex gap-6 font-primary font-medium">
-        <a className="text-me text-text-primary hover:text-text-logo" href="#">
+        <Link
+          to={"/"}
+          className="text-me text-text-primary hover:text-text-logo"
+        >
+          Główna
+        </Link>
+        <Link
+          to={"/przepisy"}
+          className="text-me text-text-primary hover:text-text-logo"
+        >
           Przepisy
-        </a>
+        </Link>
         <Link
           to={"/favourites"}
           className="text-me  text-text-primary hover:text-text-logo transition-colors"

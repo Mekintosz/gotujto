@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import MainContent from "./pages/MainContent";
+import StronGlowna from "./pages/StronGlowna";
+import Przepisy from "./pages/Przepisy";
 import RecipePageWrapper from "./pages/RecipePageWrapper";
 import CategoryPage from "./pages/CategoryPage";
 import FavoritesPage from "./pages/FavoritesPage";
@@ -13,14 +13,14 @@ function App() {
     <Router>
       <Header />
       <div className="flex flex-1 items-start">
-        <Sidebar />
         <Routes>
+          <Route path="/" element={<StronGlowna />} />
           <Route
-            path="/"
+            path="/przepisy"
             element={
-              <div className="flex-1">
-                <Hero />
-                <MainContent />
+              <div className="flex flex-1">
+                <Sidebar />
+                <Przepisy />
               </div>
             }
           />
@@ -35,7 +35,8 @@ function App() {
           <Route
             path="/category/:category"
             element={
-              <div className="flex-1">
+              <div className="flex flex-1">
+                <Sidebar />
                 <CategoryPage />
               </div>
             }

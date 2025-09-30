@@ -3,7 +3,7 @@ import SearchBox from "../components/SearchBox.jsx";
 import { useState, useMemo } from "react";
 import useRecipesContext from "../contexts/useRecipesContext.js";
 
-export default function MainContent() {
+export default function Przepisy() {
   const { recipes, loading, error } = useRecipesContext();
   const [query, setQuery] = useState("");
   const normalizedQuery = (query || "").trim().toLowerCase();
@@ -15,11 +15,7 @@ export default function MainContent() {
       const titleMatches = (recipe.title ?? "")
         .toLowerCase()
         .includes(normalizedQuery);
-      // Optional: also search ingredients
-      // const ingredientsMatches = (recipe.ingredients || []).some(i =>
-      //   i.toLowerCase().includes(normalizedQuery)
-      // );
-      return titleMatches; // or titleMatches || ingredientsMatches
+      return titleMatches;
     });
   }, [normalizedQuery, recipes]);
 
