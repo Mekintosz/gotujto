@@ -17,7 +17,7 @@ function Sidebar() {
       </h2>
       <ul className="mt-8 ml-3 flex flex-col gap-2">
         <Link
-          to="/"
+          to="/przepisy"
           className="flex items-center justify-between rounded-lg py-3 text-md font-medium hover:text-text-logo transition-colors"
         >
           Wszystkie przepisy
