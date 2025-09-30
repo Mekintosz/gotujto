@@ -1,6 +1,5 @@
 import RecipeCard from "../components/RecipeCard.jsx";
 import SearchBox from "../components/SearchBox.jsx";
-import Hero from "../components/Hero.jsx";
 import { useState, useMemo } from "react";
 import useRecipesContext from "../contexts/useRecipesContext.js";
 
@@ -29,7 +28,6 @@ export default function MainContent() {
 
   return (
     <main className="flex-1">
-      <Hero />
       <SearchBox value={query} onChange={setQuery} />
       <div className="flex-1 p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredRecipes.length > 0 ? (
