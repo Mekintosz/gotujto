@@ -39,12 +39,6 @@ export default function Header() {
           className="text-me  text-text-primary hover:text-text-logo transition-colors"
           href="#"
         >
-          Dyskusje
-        </a>
-        <a
-          className="text-me  text-text-primary hover:text-text-logo transition-colors"
-          href="#"
-        >
           O nas
         </a>
       </nav>
