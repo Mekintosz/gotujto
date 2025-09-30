@@ -28,7 +28,7 @@ function Sidebar() {
         {categories.map((cat) => (
           <li key={cat}>
             <Link
-              to={`/category/${cat.toLowerCase()}`}
+              to={`/category/${encodeURIComponent(cat.toLowerCase())}`}
               className="flex items-center justify-between rounded-lg py-3 text-md font-medium  hover:text-text-logo transition-colors"
             >
               {cat}
