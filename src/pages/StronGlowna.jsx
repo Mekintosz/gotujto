@@ -7,9 +7,10 @@ export default function StronGlowna() {
   return (
     <main className="flex-1">
       <Hero />
-      <PregladajKategorie />
+
       <PopularnePrzepisy />
       <NowoDodane />
+      <PregladajKategorie />
     </main>
   );
 }

@@ -20,7 +20,10 @@
       "Rozgrzej olej w woku i smaż kurczaka, aż się zarumieni.",
       "Dodaj warzywa i smaż przez 5 minut.",
       "Wlej sos sojowy, wymieszaj i podawaj na gorąco."
-    ]
+    ],
+    "publishedAt": "2024-05-12 09:30",
+    "rating": 4.7,
+    "views": 1820
   },
   {
     "id": "vegan-buddha-bowl",
@@ -43,7 +46,10 @@
       "Upiecz batata pokrojonego w kostkę, aż będzie złoty.",
       "Ułóż w misce komosę, ciecierzycę, awokado, batata i szpinak.",
       "Polej sosem tahini i podawaj."
-    ]
+    ],
+    "publishedAt": "2024-06-03 11:15",
+    "rating": 4.6,
+    "views": 1498
   },
   {
     "id": "chocolate-lava-cake",
@@ -65,7 +71,10 @@
       "Ubij jajka z cukrem, a następnie dodaj do mieszanki czekoladowej.",
       "Dodaj mąkę i delikatnie wymieszaj.",
       "Wlej masę do foremek i piecz w 200°C przez 12 minut."
-    ]
+    ],
+    "publishedAt": "2024-02-19 18:45",
+    "rating": 4.9,
+    "views": 2345
   },
   {
     "id": "pasta-alfredo",
@@ -88,7 +97,10 @@
       "Usmaż kurczaka na patelni, aż będzie złoty.",
       "Dodaj czosnek i śmietankę, gotuj przez 5 minut.",
       "Dodaj parmezan, wymieszaj i podawaj z makaronem."
-    ]
+    ],
+    "publishedAt": "2024-03-22 17:20",
+    "rating": 4.5,
+    "views": 1987
   },
   {
     "id": "greek-salad",
@@ -111,7 +123,10 @@
       "Wymieszaj wszystkie składniki w misce.",
       "Dodaj oliwę z oliwek, sól i pieprz do smaku.",
       "Podawaj od razu."
-    ]
+    ],
+    "publishedAt": "2024-04-08 13:05",
+    "rating": 4.4,
+    "views": 1583
   },
   {
     "id": "banana-pancakes",
@@ -133,7 +148,10 @@
       "Dodaj mąkę i proszek do pieczenia.",
       "Smaż na patelni na maśle po 2-3 minuty z każdej strony.",
       "Podawaj z syropem lub owocami."
-    ]
+    ],
+    "publishedAt": "2024-01-27 08:10",
+    "rating": 4.8,
+    "views": 2114
   },
   {
     "id": "spaghetti-bolognese",
@@ -156,7 +174,10 @@
       "Usmaż cebulę i czosnek, dodaj mięso i smaż do zarumienienia.",
       "Dodaj pomidory, gotuj 15 minut, dopraw do smaku.",
       "Podawaj sos na makaronie."
-    ]
+    ],
+    "publishedAt": "2024-05-29 19:10",
+    "rating": 4.6,
+    "views": 2059
   },
   {
     "id": "avocado-toast",
@@ -177,7 +198,10 @@
       "Rozgnieć awokado z solą, pieprzem i sokiem z cytryny.",
       "Posmaruj tosty awokado, dodaj jajko, jeśli chcesz.",
       "Podawaj od razu."
-    ]
+    ],
+    "publishedAt": "2024-04-15 07:55",
+    "rating": 4.3,
+    "views": 1760
   },
   {
     "id": "fruit-smoothie",
@@ -197,7 +221,10 @@
       "Włóż wszystkie składniki do blendera.",
       "Zmiksuj na gładką konsystencję.",
       "Podawaj od razu."
-    ]
+    ],
+    "publishedAt": "2024-02-11 07:20",
+    "rating": 4.5,
+    "views": 1632
   },
   {
     "id": "grilled-salmon",
@@ -216,7 +243,10 @@
       "Przypraw łososia solą, pieprzem i sokiem z cytryny.",
       "Grilluj 5-7 minut z każdej strony.",
       "Podawaj z warzywami lub sałatką."
-    ]
+    ],
+    "publishedAt": "2024-06-18 18:05",
+    "rating": 4.7,
+    "views": 1420
   },
   {
     "id": "caprese-salad",
@@ -237,7 +267,10 @@
       "Ułóż na przemian na talerzu z liśćmi bazylii.",
       "Skrop oliwą, dopraw solą i pieprzem.",
       "Podawaj od razu."
-    ]
+    ],
+    "publishedAt": "2024-03-05 12:40",
+    "rating": 4.2,
+    "views": 1215
   },
   {
     "id": "chicken-tacos",
@@ -258,7 +291,10 @@
       "Podgrzej tortille.",
       "Nałóż sałatę, kurczaka, salsę i ser.",
       "Zwiń tortille i podawaj."
-    ]
+    ],
+    "publishedAt": "2024-07-02 20:15",
+    "rating": 4.4,
+    "views": 1879
   },
   {
     "id": "vegan-pasta",
@@ -281,7 +317,10 @@
       "Podsmaż warzywa na oliwie.",
       "Dodaj sos pomidorowy i gotuj 5 minut.",
       "Wymieszaj z makaronem i podawaj."
-    ]
+    ],
+    "publishedAt": "2024-05-07 11:25",
+    "rating": 4.3,
+    "views": 1388
   },
   {
     "id": "blueberry-muffins",
@@ -304,7 +343,10 @@
       "Dodaj mąkę i proszek do pieczenia, wymieszaj.",
       "Delikatnie wmieszaj borówki.",
       "Piec 20 minut w 180°C."
-    ]
+    ],
+    "publishedAt": "2024-01-15 16:00",
+    "rating": 4.8,
+    "views": 2267
   },
   {
     "id": "quiche-lorraine",
@@ -326,7 +368,10 @@
       "Podsmaż boczek.",
       "Wymieszaj jajka ze śmietaną i serem.",
       "Dodaj boczek i piecz 30 minut w 180°C."
-    ]
+    ],
+    "publishedAt": "2024-03-28 15:10",
+    "rating": 4.1,
+    "views": 1134
   },
   {
     "id": "chocolate-chip-cookies",
@@ -348,7 +393,10 @@
       "Utrzyj masło z cukrem i jajkiem.",
       "Dodaj mąkę, proszek i czekoladę.",
       "Formuj ciasteczka i piecz 12 minut w 180°C."
-    ]
+    ],
+    "publishedAt": "2024-02-24 14:55",
+    "rating": 4.7,
+    "views": 2475
   },
   {
     "id": "greek-yogurt-parfait",
@@ -368,7 +416,10 @@
       "Na przemian układaj jogurt, granolę i owoce w szklance.",
       "Skrop miodem.",
       "Podawaj od razu."
-    ]
+    ],
+    "publishedAt": "2024-03-11 08:25",
+    "rating": 4.5,
+    "views": 1742
   },
   {
     "id": "veggie-wrap",
@@ -390,7 +441,10 @@
       "Posmaruj tortillę hummusem.",
       "Ułóż warzywa i zawiń.",
       "Przekrój na pół i podawaj."
-    ]
+    ],
+    "publishedAt": "2024-04-20 10:05",
+    "rating": 4.2,
+    "views": 1306
   },
   {
     "id": "pumpkin-soup",
@@ -411,7 +465,10 @@
       "Podsmaż cebulę i czosnek.",
       "Dodaj dynię i bulion, gotuj 20 minut.",
       "Zmiksuj na krem, dopraw i podawaj."
-    ]
+    ],
+    "publishedAt": "2024-09-14 18:30",
+    "rating": 4.6,
+    "views": 1995
   },
   {
     "id": "pesto-pasta",
@@ -431,7 +488,10 @@
       "Ugotuj makaron.",
       "Dodaj pesto i wymieszaj.",
       "Dodaj pokrojone pomidorki i podawaj."
-    ]
+    ],
+    "publishedAt": "2024-06-25 12:20",
+    "rating": 4.4,
+    "views": 1540
   },
   {
     "id": "strawberry-ice-cream",
@@ -451,7 +511,10 @@
       "Zmiksuj truskawki z cukrem i sokiem.",
       "Ubij śmietankę i delikatnie wymieszaj z puree.",
       "Przelej do pojemnika i zamroź 4 godziny."
-    ]
+    ],
+    "publishedAt": "2024-07-18 14:10",
+    "rating": 4.8,
+    "views": 2386
   },
   {
     "id": "omelette-vegetable",
@@ -472,7 +535,10 @@
       "Podsmaż warzywa na oliwie.",
       "Wlej jajka i smaż na małym ogniu.",
       "Podawaj od razu."
-    ]
+    ],
+    "publishedAt": "2024-01-06 07:05",
+    "rating": 4.4,
+    "views": 1854
   },
   {
     "id": "chocolate-mousse",
@@ -493,7 +559,10 @@
       "Ubij śmietankę z cukrem.",
       "Dodaj jajko i połącz z czekoladą.",
       "Chłodź w lodówce 2 godziny."
-    ]
+    ],
+    "publishedAt": "2024-02-28 19:45",
+    "rating": 4.9,
+    "views": 2521
   },
   {
     "id": "caesar-salad",
@@ -515,7 +584,10 @@
       "Pokrój sałatę i wymieszaj z sosem.",
       "Dodaj kurczaka, grzanki i parmezan.",
       "Podawaj od razu."
-    ]
+    ],
+    "publishedAt": "2024-04-02 12:50",
+    "rating": 4.5,
+    "views": 1678
   },
   {
     "id": "fruit-salad",
@@ -536,7 +608,10 @@
       "Pokrój owoce w kostkę.",
       "Wymieszaj z sokiem z cytryny.",
       "Podawaj od razu."
-    ]
+    ],
+    "publishedAt": "2024-03-09 09:40",
+    "rating": 4.1,
+    "views": 1189
   },
   {
     "id": "turkey-sandwich",
@@ -557,7 +632,10 @@
       "Posmaruj chleb majonezem.",
       "Dodaj indyka, sałatę i pomidor.",
       "Złóż kanapkę i podawaj."
-    ]
+    ],
+    "publishedAt": "2024-05-14 12:15",
+    "rating": 4.2,
+    "views": 1256
   },
   {
     "id": "grilled-vegetables",
@@ -567,12 +645,20 @@
     "category": "Przekąska",
     "prepTime": "10 min",
     "cookTime": "15 min",
-    "ingredients": ["1 cukinia", "1 bakłażan", "Papryka", "Oliwa, sól, pieprz"],
+    "ingredients": [
+      "1 cukinia",
+      "1 bakłażan",
+      "Papryka",
+      "Oliwa, sól, pieprz"
+    ],
     "instructions": [
       "Pokrój warzywa i posmaruj oliwą.",
       "Grilluj 10-15 minut, obracając warzywa.",
       "Podawaj od razu."
-    ]
+    ],
+    "publishedAt": "2024-06-09 18:00",
+    "rating": 4,
+    "views": 1097
   },
   {
     "id": "shrimp-scampi",
@@ -594,7 +680,10 @@
       "Dodaj krewetki i smaż 3-4 minuty.",
       "Wlej wino, gotuj 2 minuty.",
       "Posyp pietruszką i podawaj."
-    ]
+    ],
+    "publishedAt": "2024-08-04 19:55",
+    "rating": 4.6,
+    "views": 1933
   },
   {
     "id": "banana-bread",
@@ -616,7 +705,10 @@
       "Rozgnieć banany i wymieszaj z jajkiem i masłem.",
       "Dodaj mąkę, cukier i proszek do pieczenia.",
       "Wlej do formy i piecz 50 minut w 180°C."
-    ]
+    ],
+    "publishedAt": "2024-01-20 15:25",
+    "rating": 4.7,
+    "views": 2144
   },
   {
     "id": "cucumber-salad",
@@ -636,7 +728,10 @@
       "Pokrój ogórki i cebulę.",
       "Dodaj sól, pieprz, ocet i koperek.",
       "Wymieszaj i podawaj."
-    ]
+    ],
+    "publishedAt": "2024-04-17 10:45",
+    "rating": 4,
+    "views": 1028
   },
   {
     "id": "mango-lassi",
@@ -656,7 +751,10 @@
       "Obierz mango i pokrój w kostkę.",
       "Zmiksuj z jogurtem, mlekiem i miodem.",
       "Podawaj schłodzone."
-    ]
+    ],
+    "publishedAt": "2024-03-31 08:50",
+    "rating": 4.5,
+    "views": 1721
   },
   {
     "id": "beef-stir-fry",
@@ -679,6 +777,9 @@
       "Rozgrzej olej i smaż wołowinę do zarumienienia.",
       "Dodaj warzywa i sos sojowy, smaż 5 minut.",
       "Podawaj na gorąco."
-    ]
+    ],
+    "publishedAt": "2024-06-27 19:05",
+    "rating": 4.4,
+    "views": 1896
   }
 ]
