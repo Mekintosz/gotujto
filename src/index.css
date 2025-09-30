@@ -7,7 +7,7 @@
   --font-logo: "Chango", sans-serif;
   --color-primary: #ec7813;
   --color-secondary: #f3ede7;
-  --color-background: #fff0e5;
+  --color-background: rgb(254, 243, 236);
   --color-text-primary: #1b140d;
   --color-text-secondary: #9a704c;
   --color-text-logo: #ff7f0f;
@@ -18,10 +18,14 @@ root {
   --font-logo: "Chango", sans-serif;
   --color-primary: #;
   --color-secondary: #f3ede7;
-  --color-background: #fff0e5;
-  --colors-text-primary: #1b140d;
+  --color-background: rgb(255, 157, 96);
+  --colors-text-primary: rgb(27, 20, 13);
   --colors-text-secondary: #9a704c;
-  --color-text-logo: #ff7f0e;
+  --color-text-logo: rgb(255, 127, 15);
+  --antique-white: rgb(253, 235, 216);
+  --seashell: rgb(254, 243, 236);
+  --coral: rgb(244, 131, 93);
+  --paynes-gray: rgb(86, 117, 143);
 }
 
 body {
