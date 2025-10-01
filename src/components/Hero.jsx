@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section className="hero relative h-[600px] w-full">
@@ -16,9 +18,12 @@ export default function Hero() {
           beginner or a seasoned chef, find your next culinary adventure with
           us.
         </p>
-        <button className="flex h-12 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-[#ec7813] px-6 text-base font-bold leading-normal tracking-[0.015em] text-[#fcfaf8] transition-colors hover:bg-orange-600">
+        <Link
+          to="/przepisy"
+          className="flex h-12 min-w-[84px] max-w-[480px] items-center justify-center overflow-hidden rounded-xl bg-[#ec7813] px-6 text-base font-bold leading-normal tracking-[0.015em] text-[#fcfaf8] transition-colors hover:bg-orange-600"
+        >
           <span className="truncate">Explore Recipes</span>
-        </button>
+        </Link>
       </div>
     </section>
   );
