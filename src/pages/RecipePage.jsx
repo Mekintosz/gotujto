@@ -44,7 +44,7 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
           <button
             type="button"
             onClick={onBack}
-            className="flex items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+            className="flex items-center gap-2 hover:text-primary transition-colors cursor-pointer"
           >
             <span className="material-symbols-outlined">arrow_back</span>
             {backLabel}
@@ -52,16 +52,16 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
           <div className="flex items-center gap-4">
             <button
               onClick={() => toggleFavourites(recipe.id)}
-              className="flex items-center gap-2 rounded-full border border-[var(--secondary-color)] px-4 py-2 text-sm font-medium hover:bg-[var(--secondary-color)] transition-colors"
+              className="flex  w-33 items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm text-white font-bold hover:bg-tricary hover:text-primary transition-colors justify-center"
             >
-              <span className="material-symbols-outlined text-xl">
-                bookmark_border
+              <span className="material-symbols-outlined">
+                {isFavourite ? "favorite" : "heart_check"}
               </span>
-              {isFavourite ? "Saved" : "Save"}
+              {isFavourite ? "Lubię +" : "Polubiony"}
             </button>
-            <button className="flex items-center gap-2 rounded-full border border-[var(--secondary-color)] px-4 py-2 text-sm font-medium hover:bg-[var(--secondary-color)] transition-colors">
-              <span className="material-symbols-outlined text-xl">print</span>
-              Print
+            <button className="flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium hover:bg-tricary transition-colors">
+              <span className="material-symbols-outlined">print</span>
+              Drukuj
             </button>
           </div>
         </div>
@@ -69,9 +69,7 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
           {/* Instructions */}
           <div className="lg:col-span-2">
-            <h2 className="text-3xl tracking-tight font-medium">
-              Instructions
-            </h2>
+            <h2 className="text-3xl tracking-tight font-medium">Przepis:</h2>
             <ol className="prose prose-lg mt-6 max-w-none list-decimal space-y-6 pl-6">
               {recipe.instructions.map((step, idx) => (
                 <li key={idx}>{step}</li>
@@ -83,29 +81,27 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
             {/* Times */}
             <div>
               <h3 className="text-xl tracking-tight font-medium">
-                Prep & Cook Time
+                Czas przygotowania
               </h3>
-              <div className="mt-4 grid grid-cols-2 gap-4">
-                <div className="rounded-lg bg-[var(--secondary-color)] p-4">
-                  <div className="text-sm font-medium text-[var(--text-secondary)]">
-                    Prep Time
+              <div className="mt-4 grid grid-cols-2 gap-4 place-items-center text-center">
+                <div className="rounded-lg bg-tricary p-4 ">
+                  <div className="text-sm font-medium py-2 text-text-secondary">
+                    Przygotow.
                   </div>
-                  <div className="text-lg font-medium">{recipe.prepTime}</div>
+                  <div className="text-xl font-medium ">{recipe.prepTime}</div>
                 </div>
-                <div className="rounded-lg bg-[var(--secondary-color)] p-4">
-                  <div className="text-sm font-medium text-[var(--text-secondary)]">
-                    Cook Time
+                <div className="rounded-lg bg-tricary p-4">
+                  <div className="text-sm font-medium py-2 text-text-secondary">
+                    Gotowanie
                   </div>
-                  <div className="text-lg font-medium">{recipe.cookTime}</div>
+                  <div className="text-xl font-medium">{recipe.cookTime}</div>
                 </div>
               </div>
             </div>
 
             {/* Ingredients */}
             <div>
-              <h3 className="text-xl tracking-tight font-medium">
-                Ingredients
-              </h3>
+              <h3 className="text-xl tracking-tight font-medium">Składniki</h3>
               <ul className="mt-4 list-disc space-y-2 pl-5">
                 {recipe.ingredients.map((item, idx) => (
                   <li key={idx}>{item}</li>

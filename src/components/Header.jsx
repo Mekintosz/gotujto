@@ -46,7 +46,7 @@ export default function Header() {
             Gotujto
           </a>
         </div>
-        <nav className="hidden gap-6 font-primary font-medium md:flex">
+        <nav className="hidden gap-6 font-primary font-medium text-lg md:flex">
           {NAV_LINKS.map((item) =>
             item.to.startsWith("#") ? (
               <a

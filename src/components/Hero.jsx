@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero relative h-[600px] w-full">
       <img
         className="h-full w-full object-cover"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Mc0bW9QNIq8K6omkjwa8GLAKOvgpsw2_exFXBfyp45Xy_USoBljQha1NtnY07-hXW-nJ_Vvidr3zIn0bLwOZdxxaUxgyilCZ49P5MHJTq1hdQBCjbZxuBsoamAJknYLNZDpNG1aNcaMDr9n7z8JCMnFfFPghc9FmbeOaSkHuUW5eFwusWE0ekGWmduVNTZbKJFpNWjzVl49rtvol_G-km08A2m85AskcZ2P4Pc3gBX_2je3yrxSqs0gVH4zXGKGfzcQu2jvPyw"
+        src="images/annie-spratt-R3LcfTvcGWY-unsplash.jpg"
         alt="A vibrant salad in a white bowl with fresh ingredients"
         loading="lazy"
       />
