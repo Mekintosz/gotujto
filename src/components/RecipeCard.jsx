@@ -2,16 +2,32 @@ import { Link, useLocation } from "react-router-dom";
 
 function RecipeCard({ id, title, description, image }) {
   const location = useLocation();
-  const fromCategory = location.pathname.startsWith("/category/")
+  const fromCategorySlug = location.pathname.startsWith("/kategoria/")
     ? location.pathname.split("/").pop()
     : null;
+  const fromCategory = fromCategorySlug
+    ? decodeURIComponent(fromCategorySlug)
+    : null;
+  const fromCategoryLabel = fromCategory
+    ? fromCategory
+        .split(/[-_\s]+/)
+        .map(
+          (part) => part.charAt(0).toLocaleUpperCase("pl-PL") + part.slice(1)
+        )
+        .join(" ")
+    : null;
+
+  const linkState = {
+    from: location.pathname,
+  };
+
+  if (fromCategory) {
+    linkState.fromCategory = fromCategory;
+    linkState.fromCategoryLabel = fromCategoryLabel;
+  }
 
   return (
-    <Link
-      to={`/recipes/${id}`}
-      state={fromCategory ? { fromCategory } : null}
-      className="block group"
-    >
+    <Link to={`/przepisy/${id}`} state={linkState} className="block group">
       <div className="group text-wrap flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-lg">
         <div className="aspect-3/2 overflow-hidden">
           <img

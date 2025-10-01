@@ -11,18 +11,18 @@ export default function Hero() {
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 p-4 text-center">
         <h1 className="mb-4 font-headings text-5xl text-white sm:text-6xl md:text-7xl">
-          Taste the World, One Recipe at a Time.
+          Posmakuj świata, przepis po przepisie.
         </h1>
         <p className="mb-8 max-w-2xl text-lg text-white sm:text-xl">
-          Discover thousands of recipes from around the globe. Whether you're a
-          beginner or a seasoned chef, find your next culinary adventure with
-          us.
+          Odkryj tysiące przepisów z całego świata. Czy jesteś początkującym,
+          czy doświadczonym kucharzem, rozpocznij swoją następną kulinarną
+          przygodę z nami.
         </p>
         <Link
           to="/przepisy"
           className="flex h-12 min-w-[84px] max-w-[480px] items-center justify-center overflow-hidden rounded-xl bg-[#ec7813] px-6 text-base font-bold leading-normal tracking-[0.015em] text-[#fcfaf8] transition-colors hover:bg-orange-600"
         >
-          <span className="truncate">Explore Recipes</span>
+          <span className="truncate">Odkrywaj przepisy</span>
         </Link>
       </div>
     </section>

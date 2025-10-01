@@ -1,22 +1,24 @@
-import { Link, useLocation } from "react-router-dom";
 import useRecipesContext from "../contexts/useRecipesContext";
 
-export default function RecipeDetail({ recipe }) {
-  const location = useLocation();
-  const { favorites, toggleFavourites } = useRecipesContext();
-  const isFavourite = favorites.includes(recipe.id);
+export default function RecipeDetail({ recipe, onBack, locationState }) {
+  const { favorites = [], toggleFavourites } = useRecipesContext();
 
   if (!recipe)
     return (
       <p className="text-center text-textSecondary">Nie znaleziono przepisu.</p>
     );
-  let backLink = "/";
-  let backLabel = "Wróć do przepisów";
 
-  if (location.state?.fromCategory) {
-    backLink = `/category/${location.state.fromCategory}`;
-    backLabel = `Wróć do kategorii ${location.state.fromCategory}`;
-  }
+  const isFavourite = favorites?.includes?.(recipe.id) ?? false;
+  const categoryLabel = locationState?.fromCategoryLabel;
+  const decodedCategory = locationState?.fromCategory
+    ? decodeURIComponent(locationState.fromCategory)
+    : null;
+  const resolvedCategory = categoryLabel || decodedCategory;
+  const backLabel = resolvedCategory
+    ? `Wróć do kategorii ${resolvedCategory}`
+    : locationState?.from === "/"
+    ? "Wróć do strony głównej"
+    : "Wróć do przepisów";
   return (
     <main className="flex-1">
       {/* Hero */}
@@ -39,13 +41,14 @@ export default function RecipeDetail({ recipe }) {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Back & Actions */}
         <div className="flex items-center justify-between mb-8">
-          <Link
-            to={backLink}
+          <button
+            type="button"
+            onClick={onBack}
             className="flex items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
           >
             <span className="material-symbols-outlined">arrow_back</span>
             {backLabel}
-          </Link>
+          </button>
           <div className="flex items-center gap-4">
             <button
               onClick={() => toggleFavourites(recipe.id)}

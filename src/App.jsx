@@ -25,7 +25,7 @@ function App() {
             }
           />
           <Route
-            path="/recipes/:id"
+            path="/przepisy/:id"
             element={
               <div className="flex-1">
                 <RecipePageWrapper />
@@ -33,7 +33,7 @@ function App() {
             }
           />
           <Route
-            path="/category/:category"
+            path="/kategoria/:category"
             element={
               <div className="flex flex-1">
                 <Sidebar />

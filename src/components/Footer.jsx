@@ -3,9 +3,11 @@ export default function Footer() {
     <footer className="border-t border-secondary bg-background px-4 py-8 sm:px-6 lg:px-10">
       <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
         <div className="flex flex-col gap-4 text-center text-text-primary md:text-left">
-          <h3 className="text-xl font-bold">Sign up for our newsletter</h3>
+          <h3 className="text-xl font-bold">
+            Zapisz się do naszego newslettera
+          </h3>
           <p className="text-text-secondary">
-            Get the latest recipes and cooking tips delivered to your inbox.
+            Otrzymuj najnowsze przepisy i porady kulinarne na swoją skrzynkę.
           </p>
           <form
             className="mt-2 flex w-full max-w-md flex-col gap-2 sm:flex-row"
@@ -15,31 +17,33 @@ export default function Footer() {
               className="form-input w-full flex-grow rounded-xl border border-secondary bg-white px-4 py-2 text-text-primary placeholder:text-text-secondary focus:border-primary focus:ring-primary"
               type="email"
               name="newsletter-email"
-              placeholder="Your email address"
+              placeholder="Twój adres email"
             />
             <button
               className="h-11 flex-shrink-0 cursor-pointer items-center justify-center rounded-xl bg-primary px-6 font-bold leading-normal tracking-[0.015em] text-background transition-colors hover:bg-orange-600"
               type="submit"
             >
-              Sign Up
+              Zapisz się
             </button>
           </form>
         </div>
         <div className="flex flex-col items-center gap-6 text-center text-text-secondary sm:flex-row sm:justify-center md:justify-end">
           <div className="flex flex-col gap-2">
-            <p className="text-sm">&copy; 2024 Gotujto. All rights reserved.</p>
+            <p className="text-sm">
+              &copy; 2024 Gotujto. Wszystkie prawa zastrzeżone.
+            </p>
             <div className="flex justify-center gap-4 md:justify-start">
               <a
                 className="text-sm transition-colors hover:text-text-primary"
                 href="#"
               >
-                Privacy Policy
+                Polityka prywatności
               </a>
               <a
                 className="text-sm transition-colors hover:text-text-primary"
                 href="#"
               >
-                Terms of Service
+                Regulamin
               </a>
             </div>
           </div>
