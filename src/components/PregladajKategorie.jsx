@@ -29,17 +29,17 @@ export default function PregladajKategorie() {
       <h2 className="text-[#1b140d] text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-5">
         Przeglądaj Kategorie
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 px-4 text-xl md:text-2xl lg:text-3xl">
+      <div className="grid grid-cols-2  sm:grid-cols-4 gap-4 px-4 text-xl md:text-2xl lg:text-3xl">
         {categories.map((category) => (
           <Link
             key={category.slug}
-            className="flex flex-col items-center justify-center gap-2 rounded-xl bg-[#f3ede7] p-4 aspect-square text-center text-[#1b140d] hover:bg-[#eaddd0] transition-colors"
+            className="flex flex-col items-center justify-center gap-2 rounded-xl bg-bg-secondary p-4 aspect-square text-center text-[#1b140d] hover:bg-[#eaddd0] transition-colors"
             to={`/kategoria/${category.slug}`}
           >
-            <span className="material-symbols-outlined large text-[#9a704c]">
+            <span className="material-symbols-outlined large text-text-secondary">
               {category.icon}
             </span>
-            <p className="font-bold">{category.label}</p>
+            <p className="font-bold text-text-secondary">{category.label}</p>
           </Link>
         ))}
       </div>

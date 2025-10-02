@@ -7,6 +7,7 @@ import Przepisy from "./pages/Przepisy";
 import RecipePageWrapper from "./pages/RecipePageWrapper";
 import CategoryPage from "./pages/CategoryPage";
 import FavoritesPage from "./pages/FavoritesPage";
+import ONas from "./pages/ONas";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
               </div>
             }
           />
+          <Route path="/o-nas" element={<ONas />} />
         </Routes>
       </div>
       <Footer />

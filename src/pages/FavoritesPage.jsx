@@ -14,10 +14,15 @@ function FavoritesPage() {
   }
 
   return (
-    <section className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {favoriteRecipes.map((recipe) => (
-        <RecipeCard key={recipe.id} id={recipe.id} {...recipe} />
-      ))}
+    <section>
+      <h2 className="pl-6 pt-6 lg:text-lg font-medium text-text-secondary">
+        Twoje ulubione przepisy:
+      </h2>
+      <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {favoriteRecipes.map((recipe) => (
+          <RecipeCard key={recipe.id} id={recipe.id} {...recipe} />
+        ))}
+      </div>
     </section>
   );
 }

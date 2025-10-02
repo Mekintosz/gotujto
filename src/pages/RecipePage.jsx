@@ -44,7 +44,7 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
           <button
             type="button"
             onClick={onBack}
-            className="flex items-center gap-2 hover:text-primary transition-colors cursor-pointer"
+            className="flex font-medium items-center gap-2 hover:text-primary transition-colors cursor-pointer"
           >
             <span className="material-symbols-outlined">arrow_back</span>
             {backLabel}
@@ -52,12 +52,12 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
           <div className="flex items-center gap-4">
             <button
               onClick={() => toggleFavourites(recipe.id)}
-              className="flex  w-33 items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm text-white font-bold hover:bg-tricary hover:text-primary transition-colors justify-center"
+              className="flex w-33 items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm text-white font-bold hover:bg-bg-secondary hover:text-primary transition-colors justify-center"
             >
               <span className="material-symbols-outlined">
-                {isFavourite ? "favorite" : "heart_check"}
+                {isFavourite ? "heart_check" : "favorite"}
               </span>
-              {isFavourite ? "Lubię +" : "Polubiony"}
+              {isFavourite ? "Polubiony" : "Lubię"}
             </button>
             <button className="flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium hover:bg-tricary transition-colors">
               <span className="material-symbols-outlined">print</span>
@@ -69,7 +69,7 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
           {/* Instructions */}
           <div className="lg:col-span-2">
-            <h2 className="text-3xl tracking-tight font-medium">Przepis:</h2>
+            <h2 className="text-3xl font-medium tracking-wider">Przepis:</h2>
             <ol className="prose prose-lg mt-6 max-w-none list-decimal space-y-6 pl-6">
               {recipe.instructions.map((step, idx) => (
                 <li key={idx}>{step}</li>
@@ -84,13 +84,13 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
                 Czas przygotowania
               </h3>
               <div className="mt-4 grid grid-cols-2 gap-4 place-items-center text-center">
-                <div className="rounded-lg bg-tricary p-4 ">
+                <div className="rounded-lg bg-bg-secondary p-4 ">
                   <div className="text-sm font-medium py-2 text-text-secondary">
                     Przygotow.
                   </div>
                   <div className="text-xl font-medium ">{recipe.prepTime}</div>
                 </div>
-                <div className="rounded-lg bg-tricary p-4">
+                <div className="rounded-lg bg-bg-secondary p-4">
                   <div className="text-sm font-medium py-2 text-text-secondary">
                     Gotowanie
                   </div>

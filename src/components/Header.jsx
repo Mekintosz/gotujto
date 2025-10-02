@@ -4,8 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 const NAV_LINKS = [
   { label: "Główna", to: "/" },
   { label: "Przepisy", to: "/przepisy" },
-  { label: "Ulubione przepisy", to: "/favourites" },
-  { label: "O nas", to: "#" },
+  { label: "Ulubione", to: "/favourites" },
+  { label: "O nas", to: "/o-nas" },
 ];
 
 export default function Header() {
@@ -16,9 +16,9 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   const resolveLinkClass = (to) => {
-    const baseClass = "text-me transition-colors";
-    const activeClass = "text-text-logo";
-    const inactiveClass = "text-text-primary hover:text-text-logo";
+    const baseClass = "text-md font-semibold transition-colors";
+    const activeClass = "text-logo";
+    const inactiveClass = "text-text-primary hover:text-logo";
 
     if (!to || to.startsWith("#")) {
       return `${baseClass} ${inactiveClass}`;
@@ -32,21 +32,21 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-10 border-b border-secondary bg-background/80 backdrop-blur-sm">
-      <div className="flex h-12 items-center justify-between px-6">
-        <div className="flex items-center justify-between gap-6">
+      <div className="flex items-center justify-between px-6">
+        <div>
           <a
-            className="flex items-center-safe gap-1 font-logo text-xl text-text-logo lg:text-2xl"
-            href="#"
+            className="flex items-center gap-1 font-logo text-[30px] text-logo lg:text-[34px]"
+            href=""
           >
             <img
-              className="h-8 lg:h-10"
+              className="h-9 lg:h-11"
               src="/images/bakery_dining.svg"
               alt="Crosaint icon"
             />
-            Gotujto
+            <span className="pb-2">Gotujto</span>
           </a>
         </div>
-        <nav className="hidden gap-6 font-primary font-medium text-lg md:flex">
+        <nav className="hidden gap-10 font-primary font-medium text-lg md:flex">
           {NAV_LINKS.map((item) =>
             item.to.startsWith("#") ? (
               <a

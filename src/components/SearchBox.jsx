@@ -24,7 +24,7 @@ function SearchBox({
   };
 
   return (
-    <div className="flex w-full items-center p-6">
+    <div className="flex w-full items-center p-6 max-w-160 mx-auto">
       <div className="relative flex w-full items-center">
         <input
           ref={inputRef}
@@ -33,8 +33,7 @@ function SearchBox({
           onChange={(e) => onChange(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          className="w-full h-12 px-4 text-m bg-white rounded-3xl ring-1 ring-primary caret-primary caret-2 focus:outline-none focus:ring-2 focus:ring-primary"
-          autoFocus
+          className="w-full h-12 px-4 text-m bg-white rounded-3xl ring-1 ring-primary caret-primary focus:outline-none focus:ring-2 focus:ring-primary"
         />
         <button
           type="button"
