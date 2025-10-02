@@ -38,12 +38,10 @@ export default function Header() {
             className="flex items-center gap-1 font-logo text-[30px] text-logo lg:text-[34px]"
             href=""
           >
-            <img
-              className="h-9 lg:h-11"
-              src="/images/bakery_dining.svg"
-              alt="Crosaint icon"
-            />
-            <span className="pb-2">Gotujto</span>
+            <span className="material-symbols-outlined items-center logo">
+              egg_alt
+            </span>
+            <span>Gotujto</span>
           </a>
         </div>
         <nav className="hidden gap-10 font-primary font-medium text-lg md:flex">
