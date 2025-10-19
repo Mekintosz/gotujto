@@ -26,7 +26,7 @@ const categories = [
 export default function PregladajKategorie() {
   return (
     <section className="p-4 md:p-6 lg:p-8">
-      <h2 className="text-[#1b140d] text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-5">
+      <h2 className="text-text-primary text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-5">
         Przeglądaj Kategorie
       </h2>
       <div className="grid grid-cols-2  sm:grid-cols-4 gap-4 px-4 text-xl md:text-2xl lg:text-3xl">
@@ -36,10 +36,10 @@ export default function PregladajKategorie() {
             className="flex flex-col items-center justify-center gap-2 rounded-xl bg-bg-secondary p-4 aspect-square text-center text-[#1b140d] hover:bg-[#eaddd0] transition-colors"
             to={`/kategoria/${category.slug}`}
           >
-            <span className="material-symbols-outlined large text-text-secondary">
+            <span className="material-symbols-outlined large text-primary">
               {category.icon}
             </span>
-            <p className="font-bold text-text-secondary">{category.label}</p>
+            <p className="font-bold text-primary">{category.label}</p>
           </Link>
         ))}
       </div>

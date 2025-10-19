@@ -15,7 +15,7 @@ function FavoritesPage() {
 
   return (
     <section>
-      <h2 className="pl-6 pt-6 lg:text-lg font-medium text-text-secondary">
+      <h2 className="pl-6 pt-6 text-xl lg:text-2xl font-medium tracking-[-0.015em]">
         Twoje ulubione przepisy:
       </h2>
       <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
