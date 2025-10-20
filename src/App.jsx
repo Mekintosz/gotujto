@@ -19,10 +19,10 @@ function App() {
           <Route
             path="/przepisy"
             element={
-              <div className="flex flex-1">
+              <>
                 <Sidebar />
                 <Przepisy />
-              </div>
+              </>
             }
           />
           <Route
@@ -36,10 +36,10 @@ function App() {
           <Route
             path="/kategoria/:category"
             element={
-              <div className="flex flex-1">
+              <>
                 <Sidebar />
                 <CategoryPage />
-              </div>
+              </>
             }
           />
           <Route
