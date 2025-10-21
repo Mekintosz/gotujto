@@ -1,7 +1,7 @@
 # Gotujto - Modern Recipe Library
 
 Gotujto is a modern, minimalist recipe library web application designed to help users **browse, search, and organise recipes** in a clean and intuitive interface.
-The project began as a static prototype (HTML + Tailwind CSS) and is evolving into a full React-based web application with routing, dynamic data, and user interactivity.
+The project is a full React-based web application with routing, dynamic data, and user interactivity.
 
 ![Status](https://img.shields.io/badge/status-alpha-lightgrey?style=flat-square) <br/>
 ![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)<br/>
@@ -23,9 +23,9 @@ The project began as a static prototype (HTML + Tailwind CSS) and is evolving in
 
 - Recipe Library - clean grid layout of curated recipes. ✔
 - Search bar - filter by recipe name ✔, ingredients, or tags.
-- Categories - organise recipes (breakfast, lunch, dinner, snacks, etc.).
-- Recipe detail view - ingredients, instructions, nutrition info.
-- Favourites - save recipes (via localStorage or backend later).
+- Categories - organise recipes (breakfast, lunch, dinner, snacks, etc.).✔
+- Recipe detail view - ingredients✔, instructions✔, nutrition info.
+- Favourites - save recipes (via localStorage✔ or backend later).
 - Responsive UI - mobile-first, Tailwind-based. ✔
 - Dark mode (planned).
 - Community features (future: sharing, comments, ratings).
