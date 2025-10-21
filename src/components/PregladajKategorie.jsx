@@ -33,7 +33,7 @@ export default function PregladajKategorie() {
         {categories.map((category) => (
           <Link
             key={category.slug}
-            className="flex flex-col items-center justify-center gap-2 rounded-xl bg-bg-secondary p-4 aspect-square text-center text-[#1b140d] hover:bg-[#eaddd0] transition-colors"
+            className="flex flex-col items-center justify-center gap-2 rounded-xl bg-bg-secondary/70 p-4 aspect-square text-center hover:bg-bg-secondary transition-colors shadow-sm"
             to={`/kategoria/${category.slug}`}
           >
             <span className="material-symbols-outlined large text-primary">

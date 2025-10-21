@@ -28,7 +28,7 @@ function RecipeCard({ id, title, description, image }) {
 
   return (
     <Link to={`/przepisy/${id}`} state={linkState} className="block group">
-      <div className="group text-wrap flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-lg">
+      <div className="group text-wrap flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-md">
         <div className="aspect-3/2 overflow-hidden">
           <img
             src={image}
