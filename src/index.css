@@ -10,7 +10,7 @@
   --color-background: rgb(255, 250, 250);
   --color-bg-secondary: #fff2e4;
   --color-text-primary: #1b140d;
-  --color-text-secondary: #9a704c;
+  --color-text-secondary: #3a1b00;
   --color-logo: #ff7f0f;
 }
 
@@ -21,7 +21,7 @@ root {
   --color-secondary: #f3ede7;
   --color-background: rgb(255, 157, 96);
   --colors-text-primary: rgb(27, 20, 13);
-  --colors-text-secondary: #9a704c;
+  --colors-text-secondary: #3a1b00;
   --color-text-logo: rgb(255, 127, 15);
   --antique-white: rgb(253, 235, 216);
   --seashell: rgb(254, 243, 236);

@@ -19,16 +19,32 @@ The project is a full React-based web application with routing, dynamic data, an
 
 ---
 
+## To Do List
+
+- optimize images
+- tidy CSS variables
+- optimize footer for tablets
+- optimize prepis site for mobile
+- optimize fonts for mobile
+- serch input (position sticky? to think about.)
+
+---
+
 ## Features (current & planned)
+
+### Current
 
 - Recipe Library - clean grid layout of curated recipes. ✔
 - Search bar - filter by recipe name ✔, ingredients, or tags.
 - Categories - organise recipes (breakfast, lunch, dinner, snacks, etc.).✔
 - Recipe detail view - ingredients✔, instructions✔, nutrition info.
-- Favourites - save recipes (via localStorage✔ or backend later).
-- Responsive UI - mobile-first, Tailwind-based. ✔
-- Dark mode (planned).
-- Community features (future: sharing, comments, ratings).
+- Favourites - save recipes (via localStorage✔ or backend).
+- Responsive UI - mobile-first✔, Tailwind-based. ✔
+
+### Planed
+
+- Dark mode.
+- Community features (future: sharing, comments, ratings, adding recipies).
 
 ---
 
@@ -56,37 +72,6 @@ The project is a full React-based web application with routing, dynamic data, an
 - Node/Express API with MongoDB or PostgreSQL
 - Authentication (Auth0, Firebase, or custom JWT)
 - Cloud hosting (Vercel/Netlify for frontend, Railway/Render for backend)
-
----
-
-## Setup & Development
-
-1. Clone repo:
-
-   ```bash
-   git clone https://github.com/yourusername/gotujto.git
-   cd gotujto
-
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-
-   ```
-
-3. Start dev server:
-
-   ```bash
-   npm run dev
-
-   ```
-
-4. Open in browser:
-   ```bash
-   http://localhost:5173
-   ```
 
 ---
 
