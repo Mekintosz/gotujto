@@ -22,8 +22,8 @@ const team = [
 export default function NaszZespol() {
   return (
     <section className="px-4 py-16">
-      <h2 className="mb-12 text-center font-headings text-4xl text-[var(--color-text-primary,#383838)] md:text-5xl">
-        Nasz zespół
+      <h2 className="mb-12 text-center font-headings text-4xl text-text-primary d:text-5xl">
+        Zespół
       </h2>
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {team.map((member) => (
@@ -32,20 +32,16 @@ export default function NaszZespol() {
             className="flex flex-col items-center text-center"
           >
             <div
-              className="h-44 w-44 rounded-full border-4 border-[var(--color-secondary,#F3EAD9)] bg-cover bg-center bg-no-repeat shadow-lg"
+              className="h-44 w-44 rounded-full border-4 border-secondary bg-cover bg-center bg-no-repeat shadow-lg"
               style={{ backgroundImage: `url('${member.image}')` }}
             />
-            <h3 className="mt-5 text-xl font-bold text-[var(--color-text-primary,#383838)]">
+            <h3 className="mt-5 text-xl font-bold text-text-primary">
               {member.name}
             </h3>
-            <p className="text-sm text-[var(--color-text-secondary,#6b5c4b)]">
-              {member.role}
-            </p>
+            <p className="text-sm text-shadow-text-secondary">{member.role}</p>
           </div>
         ))}
       </div>
     </section>
   );
 }
-
-

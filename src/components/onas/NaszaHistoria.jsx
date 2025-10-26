@@ -2,7 +2,7 @@ export default function NaszaHistoria() {
   return (
     <section className="px-4 py-16">
       <h2 className="mb-6 text-center font-headings text-4xl text-[var(--color-text-primary,#383838)] md:text-5xl">
-        Nasza historia
+        Historia
       </h2>
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-12 rounded-2xl md:flex-row">
         <div className="w-full flex-shrink-0 md:w-1/2">
@@ -33,5 +33,3 @@ export default function NaszaHistoria() {
     </section>
   );
 }
-
-
