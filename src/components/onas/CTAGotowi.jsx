@@ -12,13 +12,13 @@ export default function CTAGotowi() {
         <div className="mt-4 flex flex-col gap-4 sm:flex-row">
           <a
             href="/przepisy"
-            className="flex h-12 min-w-[160px] items-center justify-center rounded-full bg-[var(--color-background,#FFFDF7)] px-6 text-base font-bold text-[var(--color-text-primary,#383838)] transition-transform duration-200 hover:scale-105"
+            className="flex h-11 min-w-[160px] items-center justify-center rounded-xl bg-[var(--color-background,#FFFDF7)] px-6 text-base font-bold text-[var(--color-text-primary,#383838)] transition-transform duration-200 hover:scale-102"
           >
             Odkryj przepisy
           </a>
           <a
             href="#"
-            className="flex h-12 min-w-[160px] items-center justify-center rounded-full border-2 border-white px-6 text-base font-bold transition-transform duration-200 hover:scale-105"
+            className="flex h-11 min-w-[160px] items-center justify-center rounded-xl border-2 border-white px-6 text-base font-bold transition-transform duration-200 hover:scale-102"
           >
             Dołącz do nas
           </a>

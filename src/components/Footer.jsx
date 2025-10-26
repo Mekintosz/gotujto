@@ -20,7 +20,7 @@ export default function Footer() {
               placeholder="Twój adres email"
             />
             <button
-              className="h-11 flex-shrink-0 cursor-pointer items-center justify-center rounded-xl bg-primary px-6 font-bold leading-normal tracking-[0.015em] text-background transition-colors hover:bg-orange-600"
+              className="h-11 flex-shrink-0 cursor-pointer items-center justify-center rounded-xl bg-primary px-6 font-bold leading-normal tracking-[0.015em] text-background transition-colors hover:bg-orange-400"
               type="submit"
             >
               Zapisz się
