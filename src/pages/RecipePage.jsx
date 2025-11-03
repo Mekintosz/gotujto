@@ -1,4 +1,5 @@
 import useRecipesContext from "../contexts/useRecipesContext";
+import { getResponsiveImage } from "../utils/imageHelpers";
 
 export default function RecipeDetail({ recipe, onBack, locationState }) {
   const { favorites = [], toggleFavourites } = useRecipesContext();
@@ -19,6 +20,7 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
     : locationState?.from === "/"
     ? "Wróć do strony głównej"
     : "Wróć do przepisów";
+  const responsiveImage = getResponsiveImage(recipe.image);
   return (
     <main className="flex-1">
       {/* Hero */}
@@ -26,7 +28,9 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
         <div className="absolute inset-0 bg-black/35"></div>
         <img
           alt={recipe.title}
-          src={recipe.image}
+          src={responsiveImage.src}
+          srcSet={responsiveImage.srcSet}
+          sizes="100vw"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-white">

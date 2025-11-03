@@ -51,14 +51,16 @@ export default function Footer() {
             <a href="#" aria-label="Instagram">
               <img
                 className="h-8 w-8"
-                src="public/images/Instagram_Glyph_Gradient.png"
+                src="images/Instagram_Glyph_Gradient-64w.png"
+                srcSet="images/Instagram_Glyph_Gradient-64w.png 1x, images/Instagram_Glyph_Gradient-128w.png 2x"
                 alt="Instagram icon"
               />
             </a>
             <a href="#" aria-label="Facebook">
               <img
                 className="h-8 w-8"
-                src="public/images/Facebook_Logo_Primary.png"
+                src="images/Facebook_Logo_Primary-64w.png"
+                srcSet="images/Facebook_Logo_Primary-64w.png 1x, images/Facebook_Logo_Primary-128w.png 2x"
                 alt="Facebook icon"
               />
             </a>

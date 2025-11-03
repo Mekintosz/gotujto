@@ -5,7 +5,9 @@ export default function Hero() {
     <section className="hero relative h-[600px] w-full">
       <img
         className="h-full w-full object-cover"
-        src="images/annie-spratt-R3LcfTvcGWY-unsplash.jpg"
+        src="images/annie-spratt-R3LcfTvcGWY-unsplash-1920w.jpg"
+        srcSet="images/annie-spratt-R3LcfTvcGWY-unsplash-1920w.jpg 1920w, images/annie-spratt-R3LcfTvcGWY-unsplash-3840w.jpg 3840w"
+        sizes="100vw"
         alt="A vibrant salad in a white bowl with fresh ingredients"
         loading="lazy"
       />

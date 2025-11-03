@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { getResponsiveImage } from "../utils/imageHelpers";
 
 function RecipeCard({ id, title, description, image }) {
   const location = useLocation();
@@ -26,13 +27,18 @@ function RecipeCard({ id, title, description, image }) {
     linkState.fromCategoryLabel = fromCategoryLabel;
   }
 
+  const responsiveImage = getResponsiveImage(image);
+
   return (
     <Link to={`/przepisy/${id}`} state={linkState} className="block group">
       <div className="group text-wrap flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-md">
         <div className="aspect-3/2 overflow-hidden">
           <img
-            src={image}
+            src={responsiveImage.src}
+            srcSet={responsiveImage.srcSet}
+            sizes={responsiveImage.sizes}
             alt={title}
+            loading="lazy"
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
