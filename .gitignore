@@ -25,3 +25,6 @@ dist-ssr
 
 # Image backup
 images_backup
+
+# Warp AI configuration
+WARP.md

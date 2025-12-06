@@ -1,199 +1,153 @@
-# Gotujto - Modern Recipe Library
+# Gotujto – Modern Recipe Library
 
-Gotujto is a modern, minimalist recipe library web application designed to help users **browse, search, and organise recipes** in a clean and intuitive interface.
-The project is a full React-based web application with routing, dynamic data, and user interactivity.
+## Short Description
 
-![Status](https://img.shields.io/badge/status-alpha-lightgrey?style=flat-square) <br/>
-![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)<br/>
-![React](https://img.shields.io/badge/react-19-lightgrey?style=flat-square&logo=react) <br/>
-![Vite](https://img.shields.io/badge/vite-7-lightgrey?style=flat-square&logo=vite)<br/>
-![Tailwind](https://img.shields.io/badge/tailwindcss-4-lightgrey?style=flat-square&logo=tailwindcss)<br/>
+Gotujto is a modern, minimalist recipe library built with React, Vite, and TailwindCSS. It allows users to browse, search, filter, and save recipes in a responsive, Polish-language interface backed by a static JSON data source.
 
----
+## Features
 
-## Screenshots
-
-| Recipe Library                                  | Recipe Detail                                    |
-| ----------------------------------------------- | ------------------------------------------------ |
-| ![Library View](src/assets/screenshot-page.png) | ![Detail View](src/assets/screenshot-detail.png) |
-
----
-
-## To Do List
-
-- optimize images
-- tidy CSS variables
-- optimize footer for tablets
-- optimize prepis site for mobile
-- optimize fonts for mobile
-- serch input (position sticky? to think about.)
-
----
-
-## Features (current & planned)
-
-### Current
-
-- Recipe Library - clean grid layout of curated recipes. ✔
-- Search bar - filter by recipe name ✔, ingredients, or tags.
-- Categories - organise recipes (breakfast, lunch, dinner, snacks, etc.).✔
-- Recipe detail view - ingredients✔, instructions✔, nutrition info.
-- Favourites - save recipes (via localStorage✔ or backend).
-- Responsive UI - mobile-first✔, Tailwind-based. ✔
-
-### Planed
-
-- Dark mode.
-- Community features (future: sharing, comments, ratings, adding recipies).
-
----
+- Browse a grid of curated recipes with images, titles, and descriptions.
+- Search recipes by title within the `/przepisy` view.
+- Filter recipes by category (Śniadanie, Lunch, Obiad, Deser) via category tiles and `/kategoria/:category` routes.
+- View detailed recipe pages with hero image, description, ingredients list, and step-by-step instructions.
+- See dynamically computed "Popularne przepisy" (most viewed) and "Najnowsze przepisy" (latest by `publishedAt`).
+- Save and manage favourites stored in `localStorage`, displayed on the `/favourites` page.
+- Responsive, TailwindCSS-based UI optimized for modern browsers.
 
 ## Tech Stack
 
-### Current
+- **Frontend**
+  - React 19 (`react`, `react-dom`)
+  - React Router DOM 7 (`react-router-dom`)
+  - Vite 7 (bundler/dev server)
+  - TailwindCSS 4 (`tailwindcss`, `@tailwindcss/vite`)
+- **Data**
+  - Static JSON data in `public/recipes.json` served as `/recipes.json`
+- **Tooling**
+  - ESLint 9 with React Hooks and React Refresh configs
+  - Node.js + npm (scripts and dependency management)
+
+## Project Architecture / Key Concepts
+
+- **SPA with Client-Side Routing**
+
+  - `src/main.jsx` bootstraps the React app and wraps it in `RecipesProvider`.
+  - `src/App.jsx` configures routes using `react-router-dom`:
+    - `/` – home page (`StronGlowna`)
+    - `/przepisy` – all recipes with search and sidebar
+    - `/przepisy/:id` – recipe detail page (`RecipePageWrapper` → `RecipePage`)
+    - `/kategoria/:category` – category-filtered listing
+    - `/favourites` – favourites listing
+    - `/o-nas` – about page
+
+- **State Management & Data Flow**
+
+  - `src/hooks/useRecipes.js`:
+    - Fetches recipes from `/recipes.json` with `fetch` and `AbortController`.
+    - Manages `recipes`, `loading`, and `error` state.
+  - `src/contexts/RecipesContext.jsx`:
+    - Creates a `RecipesContext` providing `{ recipes, loading, error, favorites, toggleFavourites }`.
+    - Initializes `favorites` from `localStorage` key `"favourites"` and persists changes.
+  - `src/contexts/useRecipesContext.js`:
+    - Convenience hook to access the context across components and pages.
+
+- **UI Composition**
+
+  - **Pages** (`src/pages/`):
+    - `StronGlowna.jsx` – home layout combining hero, popular, latest, and category sections.
+    - `Przepisy.jsx` – list with search and filtered recipes.
+    - `CategoryPage.jsx` – category-based filtering.
+    - `RecipePageWrapper.jsx` / `RecipePage.jsx` – detail view with back navigation and favourite toggle.
+    - `FavoritesPage.jsx` – favourites listing based on IDs in context.
+  - **Components** (`src/components/`):
+    - Layout: `Header.jsx`, `Sidebar.jsx`, `Footer.jsx`.
+    - Cards & sections: `RecipeCard.jsx`, `Hero.jsx`, `PopularnePrzepisy.jsx`, `NowoDodane.jsx`, `PregladajKategorie.jsx`, plus `onas/*` for the about page.
+    - `SearchBox.jsx` – controlled search input with keyboard and button submission.
+  - **Utilities** (`src/utils/imageHelpers.js`):
+    - Provides `getResponsiveImage` used by `RecipeCard` and `RecipePage` to generate responsive image props.
+
+- **Data Model**
+  - `public/recipes.json` defines an array of recipe objects with keys such as:
+    - `id`, `title`, `description`, `image`, `category`
+    - `prepTime`, `cookTime`
+    - `ingredients` (string array)
+    - `instructions` (string array)
+    - `publishedAt`, `rating`, `views`
+  - `PopularnePrzepisy` sorts by `views`; `NowoDodane` sorts by `publishedAt`.
+
+## Configuration
+
+- **Build & Dev Configuration**
+
+  - `vite.config.js`:
+    - Uses `@vitejs/plugin-react` and `@tailwindcss/vite`.
+    - Contains a simple dev `server.proxy` entry (currently pointing to `src/data/recipes`).
+  - `eslint.config.js`:
+    - ESLint flat config targeting `**/*.{js,jsx}`.
+    - Extends recommended JS, React Hooks, and React Refresh configs.
+    - Custom rule: `'no-unused-vars'` ignores variables matching `^[A-Z_]`.
+
+- **Styling & Theme**
+
+  - `src/index.css`:
+    - Imports TailwindCSS and Google Fonts.
+    - Declares `@theme` CSS variables for fonts and colors (e.g. `--color-primary: #ec7813`).
+    - Defines font faces and utility classes for Material Symbols icons.
+
+- **Data**
+  - All recipe content is loaded from `public/recipes.json`. Updating this file updates the library without backend changes.
+  - Images are served from `public/images/` and referenced by path in the JSON and components (e.g. hero background).
+
+## Folder Structure
+
+```text
+.
+├── public/
+│   ├── recipes.json        # Static recipe data
+│   └── images/             # Recipe and UI images
+├── src/
+│   ├── App.jsx             # Router + main layout
+│   ├── main.jsx            # React entry point
+│   ├── index.css           # Tailwind + theme configuration
+│   ├── assets/             # Additional static assets
+│   ├── components/         # Reusable UI components
+│   ├── pages/              # Route-level views
+│   ├── contexts/           # React context for recipes + favourites
+│   ├── hooks/              # Data fetching (useRecipes)
+│   └── utils/              # Helpers (e.g., imageHelpers)
+├── eslint.config.js        # ESLint flat config
+├── vite.config.js          # Vite + Tailwind configuration
+└── package.json            # Dependencies and npm scripts
+```
 
-- **Frontend**:
+## Roadmap / Future Improvements
 
-  - [React](https://react.dev/) (via Vite for fast bundling)
-  - [React Router](https://reactrouter.com/) (routing between library & recipe details)
-  - [TailwindCSS](https://tailwindcss.com/) for utility-first styling
-  - Google Fonts (Epilogue) & Material Icons
+Based on the existing documentation in this repo, planned or considered enhancements include:
 
-- **Data**:
+- **UI & UX**
 
-  - Static JSON for recipes (easy to expand later).
+  - Dark mode support.
+  - Further optimization of layouts, fonts, and footer for mobile and tablets.
 
-- **Tooling**:
-  - Node.js + npm for dependency management
-  - ESLint + Prettier (recommended for consistency)
+- **Features**
 
-### Possible Backend (future)
+  - Community features such as sharing, comments, ratings, and user-submitted recipes.
+  - Meal planner and shopping list generation.
+  - User profiles with custom recipe uploads.
+  - Ratings, reviews, and social sharing.
+  - Multilingual support (e.g. Polish and English).
+  - PWA (offline access) capabilities.
 
-- Node/Express API with MongoDB or PostgreSQL
-- Authentication (Auth0, Firebase, or custom JWT)
-- Cloud hosting (Vercel/Netlify for frontend, Railway/Render for backend)
+- **Backend & Infrastructure**
 
----
+  - Migrating from static JSON to a backend API (Node/Express with MongoDB or PostgreSQL).
+  - Authentication and authorization (e.g. Auth0, Firebase, or custom JWT).
+  - Cloud deployment for frontend and backend.
 
-## App Logic
-
-- Homepage (Recipe Library)
-  Fetch recipes from a JSON file and render them with RecipeCard.
-  Filters: search query + category.
-
-- Recipe Detail View
-  Dynamic route (/recipe/:id), display full details.
-
-- Favorites
-  Save recipe IDs to localStorage → highlight saved ones.
-
-- Expansion
-  Replace static JSON with API calls. Add forms for user-generated content.
-
----
-
-## Skills Gained as a Developer
-
-**Current development**:
-
-- Building responsive layouts with TailwindCSS
-
-- Setting up a React project with Vite
-
-- component-driven architecture (cards, lists, details)
-
-- Client-side routing with React Router
-
-- Managing local state and JSON data
-
-- State management with Context API
-
-**Future skills with expansion**:
-
-- API integration (fetch, axios, custom backend)
-
-- State management (Redux, Zustand)
-
-- Authentication & authorization flows
-
-- Database design for recipes, users, favourites
-
-- Deployment & CI/CD pipelines
-
-- Accessibility improvements (ARIA, keyboard nav, color contrast checks)
-
----
-
-## Expansion Ideas
-
-- PWA (Progressive Web App) for offline recipe access
-
-- Meal planner & shopping list generator
-
-- User profiles with custom recipe uploads
-
-- Ratings, reviews, and social sharing
-
-- AI integration (suggest recipes based on ingredients you have)
-
-- Multilingual support (e.g. Polish & English)
-
----
-
-## Future Tech Choices
-
-### Moving to TypeScript
-
-**Pros**:
-
-- Type safety → fewer runtime bugs
-
-- Better DX (autocompletion, refactoring)
-
-- Easier scaling with more contributors
-
-**Cons**:
-
-- More boilerplate for types/interfaces
-
-- Slower prototyping at the early stage
-
----
-
-### Migrating to Next.js
-
-**Pros**:
-
-- Server-side rendering (SEO-friendly)
-
-- File-based routing → simpler structure
-
-- API routes for backend-lite functionality
-
-- Easy deployment on Vercel
-
-**Cons**:
-
-- Added complexity if the project stays small
-
-- Lock-in to Next.js conventions
-
----
-
-## Challenges
-
-- Keeping UI minimal while adding features (avoid bloat)
-
-- Managing recipe data schema (ingredients, steps, nutrition)
-
-- SEO optimisation for recipe content
-
-- Handling images efficiently (CDN, optimisation)
-
-- Long-term: deciding when to move from static JSON → database
-
----
+- **Technology Evolution**
+  - Migration to TypeScript for stronger typing and maintainability.
+  - Possible migration to Next.js for SSR, SEO, and built-in API routes.
 
 ## License
 
-MIT – feel free to fork, use, and contribute.
+This project is licensed under the **MIT License** as indicated in the repository documentation.
