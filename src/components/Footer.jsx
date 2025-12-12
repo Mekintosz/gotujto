@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <footer className="border-t border-secondary bg-background px-4 py-8 sm:px-6 lg:px-10">
-      <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-        <div className="flex flex-col gap-4 text-center text-text-primary md:text-left">
+      <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
+        <div className="hidden lg:flex flex-col gap-4  text-text-primary">
           <h3 className="text-xl font-bold">
             Zapisz się do naszego newslettera
           </h3>
@@ -27,7 +27,7 @@ export default function Footer() {
             </button>
           </form>
         </div>
-        <div className="flex flex-col items-center gap-8 text-center text-text-secondary sm:flex-row sm:justify-center md:justify-end">
+        <div className="flex flex-col items-center gap-6 lg:gap-8 md:gap-18 text-center text-text-secondary sm:flex-row sm:justify-center lg:justify-end">
           <div className="flex flex-col gap-2">
             <p className="text-sm">
               &copy; 2025 Gotujto. Wszystkie prawa zastrzeżone.
