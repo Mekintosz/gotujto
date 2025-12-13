@@ -5,11 +5,11 @@ export default function Hero() {
     <section className="hero relative h-[600px] w-full">
       <img
         className="h-full w-full object-cover"
-        src="images/annie-spratt-R3LcfTvcGWY-unsplash-1920w.jpg"
-        srcSet="images/annie-spratt-R3LcfTvcGWY-unsplash-1920w.jpg 1920w, images/annie-spratt-R3LcfTvcGWY-unsplash-3840w.jpg 3840w"
+        src="images/dark-dish-1920w.png"
+        srcSet="images/dark-dish-1920w.png 1920w, images/dark-dish-3840w.png 3840w"
         sizes="100vw"
         alt="A vibrant salad in a white bowl with fresh ingredients"
-        fetchpriority="high"
+        fetchPriority="high"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 p-4 text-center">
         <h1 className="mb-4 font-headings text-5xl text-white sm:text-6xl md:text-7xl">
