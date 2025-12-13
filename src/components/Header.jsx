@@ -39,7 +39,7 @@ export default function Header() {
             href=""
           >
             <span className="material-symbols-outlined items-center logo">
-              egg_alt
+              skillet
             </span>
             <span>Gotujto</span>
           </a>
