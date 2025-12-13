@@ -17,7 +17,7 @@ export default function PopularnePrzepisy() {
 
   return (
     <section className="p-4 md:p-6 lg:p-8">
-      <h2 className="text-[#1b140d] text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-5">
+      <h2 className="text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-5">
         Popularne przepisy
       </h2>
       {loading ? (

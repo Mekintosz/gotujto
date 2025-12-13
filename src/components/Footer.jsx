@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-secondary bg-background px-4 py-8 sm:px-6 lg:px-10">
+    <footer className="border-t border-t-logo bg-bg-secondary/80 px-4 py-8 sm:px-6 lg:px-10">
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
         <div className="hidden lg:flex flex-col gap-4  text-text-primary">
           <h3 className="text-xl font-bold">

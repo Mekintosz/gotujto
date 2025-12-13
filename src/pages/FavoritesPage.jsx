@@ -7,7 +7,7 @@ function FavoritesPage() {
 
   if (favoriteRecipes.length === 0) {
     return (
-      <p className="flex-1 self-center text-center text-xl">
+      <p className="flex-1 self-center pt-16 text-center text-xl">
         Nie masz jeszcze zapisanych przepisów!
       </p>
     );

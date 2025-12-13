@@ -11,7 +11,7 @@ function Sidebar() {
   const categories = [...new Set(recipes.map((r) => r.category))];
 
   return (
-    <aside className="sticky top-16 hidden w-68 shrink-0  border-secondary p-6 md:block">
+    <aside className="sticky top-13 hidden w-68 h-[100vh] shrink-0 p-6 pt-10 md:block bg-bg-secondary/80">
       <h2 className="text-xl font-medium uppercase tracking-wider">
         Kategorie
       </h2>

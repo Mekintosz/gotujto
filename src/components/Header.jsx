@@ -17,8 +17,8 @@ export default function Header() {
 
   const resolveLinkClass = (to) => {
     const baseClass = "text-md font-semibold transition-colors";
-    const activeClass = "text-logo";
-    const inactiveClass = "text-text-primary hover:text-logo";
+    const activeClass = "text-primary";
+    const inactiveClass = "text-text-primary hover:text-primary";
 
     if (!to || to.startsWith("#")) {
       return `${baseClass} ${inactiveClass}`;
@@ -31,7 +31,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-10 border-b border-secondary bg-background/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 border-b border-b-logo bg-bg-secondary/80 backdrop-blur-sm">
       <div className="flex items-center justify-between px-6">
         <div>
           <a

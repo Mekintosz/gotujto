@@ -71,16 +71,6 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
         </div>
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
-          {/* Instructions */}
-          <div className="lg:col-span-2">
-            <h2 className="text-3xl font-medium tracking-wider">Przepis:</h2>
-            <ol className="prose prose-lg mt-6 max-w-none list-decimal space-y-6 pl-6">
-              {recipe.instructions.map((step, idx) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ol>
-          </div>
-
           <div className="space-y-8">
             {/* Times */}
             <div>
@@ -111,6 +101,18 @@ export default function RecipeDetail({ recipe, onBack, locationState }) {
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          {/* Instructions */}
+          <div className="flex place-items-center lg:col-span-2">
+            <div>
+              <h2 className="text-3xl font-medium tracking-wider">Przepis:</h2>
+              <ol className="prose prose-lg mt-6 max-w-none list-decimal space-y-6 pl-6">
+                {recipe.instructions.map((step, idx) => (
+                  <li key={idx}>{step}</li>
+                ))}
+              </ol>
             </div>
           </div>
         </div>

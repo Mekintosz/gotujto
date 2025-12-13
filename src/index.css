@@ -5,28 +5,31 @@
   --font-primary: "Quicksand", sans-serif;
   --font-headings: "Coiny", system-ui;
   --font-logo: "Paytone One", sans-serif;
-  --color-primary: #ec7813;
+  --color-primary: rgb(200, 95, 0);
   --color-secondary: #f3ede7;
-  --color-background: rgb(255, 250, 250);
+  --color-background: rgb(255, 252, 248);
   --color-bg-secondary: #fff2e4;
   --color-text-primary: #1b140d;
   --color-text-secondary: #3a1b00;
+  --color-text-nav-hover: rgb(244, 131, 93);
   --color-logo: #ff7f0f;
 }
 
 root {
   --font-headings: "Poppins", sans-serif;
   --font-logo: "Coiny", system-ui;
-  --color-primary: #;
+  --color-primary: rgb(202, 94, 0);
   --color-secondary: #f3ede7;
-  --color-background: rgb(255, 157, 96);
-  --colors-text-primary: rgb(27, 20, 13);
-  --colors-text-secondary: #3a1b00;
+  --color-background: rgb(255, 252, 248);
+  --colors-text-primary: #1b140d;
+  --colors-text-secondary: rgb(58, 27, 0);
   --color-text-logo: rgb(255, 127, 15);
   --antique-white: rgb(253, 235, 216);
   --seashell: rgb(254, 243, 236);
   --coral: rgb(244, 131, 93);
   --paynes-gray: rgb(86, 117, 143);
+  --color-text-nav-hover: #8f4300;
+  --color-bg-secondary: rgb(255, 242, 228);
 }
 
 body {
@@ -41,8 +44,7 @@ h1 {
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v280/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2)
-    format("woff2");
+  src: local(materialsymbolsoutlined);
 }
 
 .material-symbols-outlined {
